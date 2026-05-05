@@ -40,17 +40,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${playfair.variable} ${dmSans.variable}`}>
-      <body className="bg-stone-950 text-stone-100 font-sans antialiased">
-        <header className="fixed top-0 left-0 right-0 z-50 border-b border-stone-800/60 bg-stone-950/90 backdrop-blur-md">
+      <body className="bg-white text-secondary font-sans antialiased">
+        <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/20 bg-primary/90 backdrop-blur-md">
           <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-3 group">
-              <span className="font-serif text-lg tracking-widest uppercase text-amber-400 group-hover:text-amber-300 transition-colors">
-                Esquivel
-              </span>
-              <span className="w-px h-5 bg-stone-600" />
-              <span className="text-xs tracking-[0.25em] uppercase text-stone-400 group-hover:text-stone-300 transition-colors">
-                Propiedades
-              </span>
+            <Link href="/" className="flex items-center group">
+              <img src="/logo-x.avif" alt="Esquivel Propiedades" className="h-10 w-auto transition-opacity group-hover:opacity-80" />
             </Link>
 
             <nav className="hidden md:flex items-center gap-7">
@@ -61,7 +55,7 @@ export default function RootLayout({
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs tracking-widest uppercase text-stone-400 hover:text-amber-400 transition-colors"
+                    className="text-xs tracking-widest uppercase text-white font-medium hover:text-white/80 transition-colors"
                   >
                     {link.label}
                   </a>
@@ -69,7 +63,7 @@ export default function RootLayout({
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-xs tracking-widest uppercase text-stone-400 hover:text-amber-400 transition-colors"
+                    className="text-xs tracking-widest uppercase text-white font-medium hover:text-white/80 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -77,22 +71,21 @@ export default function RootLayout({
               )}
             </nav>
 
-            <Link
-              href="/contacto"
-              className="hidden md:inline-flex items-center gap-2 border border-amber-400/60 text-amber-400 hover:bg-amber-400 hover:text-stone-950 transition-all px-4 py-2 text-xs tracking-widest uppercase"
+            <Link href="/contacto"
+              className="hidden md:inline-flex items-center gap-2 border border-white/60 text-white hover:bg-white hover:text-primary transition-all px-4 py-2 text-xs tracking-widest uppercase"
             >
               Vender
             </Link>
 
             <details className="md:hidden group">
-              <summary className="list-none cursor-pointer p-2 text-stone-400 hover:text-amber-400 transition-colors">
+                <summary className="list-none cursor-pointer p-2 text-white hover:text-white/80 transition-colors">
                 <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
                   <line x1="0" y1="1" x2="22" y2="1" stroke="currentColor" strokeWidth="1.5" />
                   <line x1="0" y1="8" x2="22" y2="8" stroke="currentColor" strokeWidth="1.5" />
                   <line x1="0" y1="15" x2="22" y2="15" stroke="currentColor" strokeWidth="1.5" />
                 </svg>
               </summary>
-              <div className="absolute top-16 left-0 right-0 bg-stone-950 border-b border-stone-800 px-6 py-6 flex flex-col gap-5">
+              <div className="absolute top-16 left-0 right-0 bg-primary border-b border-white/20 px-6 py-6 flex flex-col gap-5">
                 {navLinks.map((link) =>
                   link.external ? (
                     <a
@@ -100,7 +93,7 @@ export default function RootLayout({
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs tracking-widest uppercase text-stone-400 hover:text-amber-400 transition-colors"
+                      className="text-xs tracking-widest uppercase text-white font-medium hover:text-white/80 transition-colors"
                     >
                       {link.label}
                     </a>
@@ -108,7 +101,7 @@ export default function RootLayout({
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-xs tracking-widest uppercase text-stone-400 hover:text-amber-400 transition-colors"
+                      className="text-xs tracking-widest uppercase text-white font-medium hover:text-white/80 transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -121,23 +114,23 @@ export default function RootLayout({
 
         <main className="pt-16">{children}</main>
 
-        <footer className="border-t border-stone-800 bg-stone-950 mt-24">
+        <footer className="border-t border-primary/20 bg-white mt-24">
           <div className="mx-auto max-w-7xl px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="flex flex-col gap-4">
-              <span className="font-serif text-amber-400 text-lg tracking-widest uppercase">
+              <span className="font-serif text-primary text-lg tracking-widest uppercase">
                 Esquivel Propiedades
               </span>
-              <p className="text-stone-500 text-sm leading-relaxed">
+              <p className="text-secondary/60 text-sm leading-relaxed">
                 Especialistas en venta de propiedades en Zona Oeste y CABA con
                 un plan de comercialización premium.
               </p>
-              <p className="text-stone-600 text-xs">
+              <p className="text-secondary/40 text-xs">
                 CMCPDJLM 1074 | CUCICBA 9497
               </p>
             </div>
 
             <div className="flex flex-col gap-3">
-              <span className="text-xs tracking-widest uppercase text-stone-500 mb-1">
+              <span className="text-xs tracking-widest uppercase text-secondary/60 mb-1">
                 Navegación
               </span>
               {navLinks.map((link) =>
@@ -147,7 +140,7 @@ export default function RootLayout({
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-stone-400 hover:text-amber-400 transition-colors"
+                    className="text-sm text-secondary/70 hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
@@ -155,7 +148,7 @@ export default function RootLayout({
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-sm text-stone-400 hover:text-amber-400 transition-colors"
+                    className="text-sm text-secondary/70 hover:text-primary transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -164,12 +157,12 @@ export default function RootLayout({
             </div>
 
             <div className="flex flex-col gap-4">
-              <span className="text-xs tracking-widest uppercase text-stone-500 mb-1">
+              <span className="text-xs tracking-widest uppercase text-secondary/60 mb-1">
                 Contacto
               </span>
               <a
                 href="https://api.whatsapp.com/send/?phone=5491137775276&text=Hola%20Sebasti%C3%A1n%2C%20me%20interesa%20vender%20mi%20propiedad.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F&type=phone_number&app_absent=0"
-                className="text-sm text-stone-400 hover:text-amber-400 transition-colors"
+                className="text-sm text-secondary/70 hover:text-primary transition-colors"
               >
                 +54 11 3777-5276
               </a>
@@ -179,7 +172,7 @@ export default function RootLayout({
               >
                 sebastianesquivel@deinmobiliarios.com
               </a>
-              <p className="text-sm text-stone-500">
+              <p className="text-sm text-secondary/60">
                 Arévalo 1880, Palermo, CABA
               </p>
               <div className="flex items-center gap-4 mt-2">
@@ -187,7 +180,7 @@ export default function RootLayout({
                   href="https://www.instagram.com/s.esquivelpropiedades/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-stone-500 hover:text-amber-400 transition-colors"
+                  className="text-secondary/60 hover:text-primary transition-colors"
                   aria-label="Instagram"
                 >
                   <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
@@ -198,7 +191,7 @@ export default function RootLayout({
                   href="https://www.youtube.com/@sebastianesquivel9252/featured"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-stone-500 hover:text-amber-400 transition-colors"
+                  className="text-secondary/60 hover:text-primary transition-colors"
                   aria-label="YouTube"
                 >
                   <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
@@ -208,7 +201,7 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-          <div className="border-t border-stone-800/60 py-5 text-center text-xs text-stone-600 tracking-wider">
+          <div className="border-t border-primary/20 py-5 text-center text-xs text-secondary/40 tracking-wider">
             © {new Date().getFullYear()} Sebastian Esquivel Propiedades — Todos los derechos reservados
           </div>
         </footer>

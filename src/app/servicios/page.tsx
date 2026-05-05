@@ -69,16 +69,16 @@ export default function ServiciosPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-28 bg-stone-950 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(180,130,50,0.1),_transparent_55%)]" />
+      <section className="relative py-28 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(81,154,207,0.06),_transparent_55%)]" />
         <div className="relative mx-auto max-w-7xl px-6">
-          <span className="text-xs tracking-[0.3em] uppercase text-amber-400 block mb-6">
+          <span className="text-xs tracking-[0.3em] uppercase text-primary block mb-6">
             Lo que hacemos
           </span>
-          <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl text-stone-50 mb-6">
+          <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl text-secondary mb-6">
             SERVICIOS
           </h1>
-          <p className="text-stone-400 text-lg max-w-xl leading-relaxed">
+          <p className="text-secondary/70 text-lg max-w-xl leading-relaxed">
             Usamos tecnología de vanguardia para vender tu propiedad en menos de
             4 meses, al mejor precio y en el menor tiempo posible.
           </p>
@@ -90,44 +90,44 @@ export default function ServiciosPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <h2 className="font-serif text-4xl md:text-5xl text-stone-50 mb-5">
+              <h2 className="font-serif text-4xl md:text-5xl text-secondary mb-5">
                 Plan de Comercialización Premium
               </h2>
-              <p className="text-stone-400 leading-relaxed">
+              <p className="text-secondary/70 leading-relaxed">
                 Realizamos procesos transparentes, seguros y eficaces para la
                 tranquilidad de todas las partes. Obtené nuestro informe de
                 tasación en tiempo récord y descubrí el valor de tu propiedad.
               </p>
             </div>
-            <div className="flex flex-col gap-4 border border-stone-800 bg-stone-900/30 p-8">
-              <span className="text-xs tracking-widest uppercase text-stone-500">
+            <div className="flex flex-col gap-4 border border-primary/20 bg-primary/5 p-8">
+              <span className="text-xs tracking-widest uppercase text-secondary/60">
                 Portales donde publicamos
               </span>
               {portals.map((portal) => (
                 <div
                   key={portal}
-                  className="flex items-center gap-3 text-stone-300"
+                  className="flex items-center gap-3 text-secondary"
                 >
-                  <span className="w-1.5 h-1.5 bg-amber-400 shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-primary shrink-0" />
                   <span className="text-sm">{portal}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-stone-800">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-primary/20">
             {services.map((service) => (
               <div
                 key={service.id}
-                className="bg-stone-950 p-7 flex flex-col gap-3 hover:bg-stone-900 transition-colors group"
+                className="bg-white p-7 flex flex-col gap-3 hover:bg-primary/5 transition-colors group"
               >
-                <span className="text-xs text-amber-400/60 font-mono">
+                <span className="text-xs text-primary/60 font-mono">
                   {service.id}
                 </span>
-                <h3 className="font-serif text-lg text-stone-100 group-hover:text-amber-400 transition-colors">
+                <h3 className="font-serif text-lg text-secondary group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-stone-500 text-sm leading-relaxed">
+                <p className="text-secondary/60 text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -137,24 +137,24 @@ export default function ServiciosPage() {
       </section>
 
       {/* Tasación */}
-      <section className="py-24 bg-stone-900/40 border-t border-b border-stone-800">
+      <section className="py-24 bg-primary/5 border-t border-b border-primary/20">
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-6">
-            <h2 className="font-serif text-4xl text-stone-50">
+            <h2 className="font-serif text-4xl text-secondary">
               ¿Querés saber cuánto vale tu propiedad?
             </h2>
-            <p className="text-stone-400 leading-relaxed">
+            <p className="text-secondary/70 leading-relaxed">
               Con nuestro informe de tasación tendrás toda la información
               necesaria, tanto de tu propiedad como del contexto actual del
               mercado, para tomar decisiones informadas en conjunto con un agente
               de primerísimo nivel.
             </p>
-            <p className="font-serif text-xl text-amber-400">
+            <p className="font-serif text-xl text-primary">
               Hagamos que tu propiedad sea la próxima que dibujemos
             </p>
             <Link
               href="/contacto"
-              className="inline-flex items-center gap-3 bg-amber-400 text-stone-950 hover:bg-amber-300 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold self-start"
+              className="inline-flex items-center gap-3 bg-primary text-white hover:bg-primary/90 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold self-start"
             >
               Quiero vender
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -164,16 +164,16 @@ export default function ServiciosPage() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <div className="border border-stone-800 bg-stone-950 p-8">
-              <h3 className="font-serif text-2xl text-stone-100 mb-4">
+            <div className="border border-primary/20 bg-white p-8">
+              <h3 className="font-serif text-2xl text-secondary mb-4">
                 Oficinas en Palermo Hollywood
               </h3>
-              <p className="text-stone-400 text-sm leading-relaxed mb-4">
+              <p className="text-secondary/70 text-sm leading-relaxed mb-4">
                 Contamos con oficinas modernas en Palermo Hollywood para darte
                 la mayor seguridad posible. Tenemos todo lo necesario para dar
                 el mejor servicio.
               </p>
-              <address className="not-italic text-stone-500 text-sm">
+              <address className="not-italic text-secondary/60 text-sm">
                 Arévalo 1880, Piso 2 — Palermo, CABA
               </address>
             </div>

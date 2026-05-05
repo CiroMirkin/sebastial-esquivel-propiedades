@@ -80,19 +80,19 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-stone-950">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(180,130,50,0.12),_transparent_60%)]" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent" />
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(81,154,207,0.08),_transparent_60%)]" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
         <div className="relative mx-auto max-w-7xl px-6 py-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="flex flex-col gap-8">
-            <span className="text-xs tracking-[0.3em] uppercase text-amber-400 font-medium">
+            <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium">
               Especialistas en Zona Oeste y CABA
             </span>
-            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-stone-50 text-balance">
+            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-secondary text-balance">
               Vendé tu propiedad al mejor precio, rápido y sin estrés.
             </h1>
-            <p className="text-stone-400 text-lg leading-relaxed max-w-md">
+            <p className="text-secondary/70 text-lg leading-relaxed max-w-md">
               Publicá con el mejor estándar de calidad. Vendé con nuestro plan
               de comercialización premium y las últimas innovaciones
               tecnológicas.
@@ -100,7 +100,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4 pt-2">
               <Link
                 href="/contacto"
-                className="inline-flex items-center gap-3 bg-amber-400 text-stone-950 hover:bg-amber-300 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold"
+                className="inline-flex items-center gap-3 bg-primary text-white hover:bg-primary/90 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold"
               >
                 Quiero vender
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -109,7 +109,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/servicios"
-                className="inline-flex items-center gap-3 border border-stone-700 text-stone-300 hover:border-amber-400/60 hover:text-amber-400 transition-colors px-8 py-4 text-xs tracking-widest uppercase"
+                className="inline-flex items-center gap-3 border border-secondary/30 text-secondary hover:border-primary hover:text-primary transition-colors px-8 py-4 text-xs tracking-widest uppercase"
               >
                 Ver servicios
               </Link>
@@ -125,12 +125,12 @@ export default function HomePage() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="border border-stone-800 bg-stone-900/50 p-6 flex flex-col gap-2"
+                className="border border-primary/20 bg-primary/5 p-6 flex flex-col gap-2"
               >
-                <span className="font-serif text-3xl text-amber-400">
+                <span className="font-serif text-3xl text-primary">
                   {stat.value}
                 </span>
-                <span className="text-xs text-stone-500 leading-snug">
+                <span className="text-xs text-secondary/60 leading-snug">
                   {stat.label}
                 </span>
               </div>
@@ -140,49 +140,49 @@ export default function HomePage() {
       </section>
 
       {/* Servicios */}
-      <section className="py-28 bg-stone-900/30">
+      <section className="py-28 bg-primary/5">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
               <span className="text-xs tracking-[0.3em] uppercase text-amber-400 block mb-4">
                 Servicios
               </span>
-              <h2 className="font-serif text-4xl md:text-5xl text-stone-50">
+              <h2 className="font-serif text-4xl md:text-5xl text-secondary">
                 Nuestro Estándar de Calidad
               </h2>
             </div>
-            <p className="text-stone-400 max-w-sm text-sm leading-relaxed">
+            <p className="text-secondary/70 max-w-sm text-sm leading-relaxed">
               Te contamos cómo vendemos en menos de 4 meses
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-800">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary/20">
             {services.map((service, i) => (
               <div
                 key={i}
-                className="bg-stone-950 p-7 flex flex-col gap-3 hover:bg-stone-900 transition-colors group"
+                className="bg-white p-7 flex flex-col gap-3 hover:bg-primary/5 transition-colors group"
               >
-                <span className="text-xs text-amber-400/60 font-mono">
+                <span className="text-xs text-primary/60 font-mono">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-serif text-lg text-stone-100 group-hover:text-amber-400 transition-colors">
+                <h3 className="font-serif text-lg text-secondary group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-stone-500 text-sm leading-relaxed">
+                <p className="text-secondary/60 text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 p-6 border border-stone-800 bg-stone-900/30">
-            <p className="text-stone-400 text-sm">
-              <span className="text-amber-400 font-medium">
+          <div className="mt-8 p-6 border border-primary/20 bg-primary/5">
+            <p className="text-secondary/70 text-sm">
+              <span className="text-primary font-medium">
                 Amoblamiento virtual incluido:{" "}
               </span>
               Realizamos un amoblamiento virtual sobre ambientes vacíos para
               generar un mejor y mayor impacto.{" "}
-              <span className="text-stone-200 font-medium uppercase text-xs tracking-wider">
+              <span className="text-secondary font-medium uppercase text-xs tracking-wider">
                 Hacemos que tu propiedad se vuelva irresistible.
               </span>
             </p>
@@ -191,7 +191,7 @@ export default function HomePage() {
           <div className="mt-8 flex justify-start">
             <Link
               href="/servicios"
-              className="inline-flex items-center gap-3 border border-amber-400/40 text-amber-400 hover:bg-amber-400 hover:text-stone-950 transition-all px-7 py-3 text-xs tracking-widest uppercase"
+              className="inline-flex items-center gap-3 border border-primary/40 text-primary hover:bg-primary hover:text-white transition-all px-7 py-3 text-xs tracking-widest uppercase"
             >
               Ver más
             </Link>
@@ -206,14 +206,14 @@ export default function HomePage() {
             <span className="text-xs tracking-[0.3em] uppercase text-amber-400">
               El fundador
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-stone-50">
+            <h2 className="font-serif text-4xl md:text-5xl text-secondary">
               Sebastian Esquivel
             </h2>
-            <p className="text-stone-400 leading-relaxed">
+            <p className="text-secondary/70 leading-relaxed">
               Nací en Ramos Mejía, Zona Oeste. Me recibí de Martillero, Corredor
               y Tasador Público a principios del 2021 y empecé a trabajar de
               forma independiente. En 2023 fundé{" "}
-              <span className="text-stone-200">
+              <span className="text-secondary">
                 Sebastian Esquivel Propiedades
               </span>
               . Me sigo capacitando diariamente sobre el mercado inmobiliario y
@@ -221,34 +221,34 @@ export default function HomePage() {
               Abogacía en la UNLAM.
             </p>
             <div className="flex flex-col gap-1">
-              <span className="text-xs text-stone-600 tracking-wider uppercase">
+              <span className="text-xs text-secondary/40 tracking-wider uppercase">
                 Matrícula
               </span>
-              <span className="text-stone-400 text-sm">
+              <span className="text-secondary/70 text-sm">
                 CMCPDJLM 1074 | CUCICBA 9497
               </span>
             </div>
             <Link
               href="/equipo"
-              className="inline-flex items-center gap-3 border border-stone-700 text-stone-300 hover:border-amber-400/60 hover:text-amber-400 transition-colors px-7 py-3 text-xs tracking-widest uppercase self-start"
+              className="inline-flex items-center gap-3 border border-secondary/30 text-secondary hover:border-primary hover:text-primary transition-colors px-7 py-3 text-xs tracking-widest uppercase self-start"
             >
               Conocé al equipo
             </Link>
           </div>
 
-          <div className="border border-stone-800 p-8 bg-stone-900/40 flex flex-col gap-6">
-            <span className="text-xs tracking-widest uppercase text-stone-500">
+          <div className="border border-primary/20 p-8 bg-primary/5 flex flex-col gap-6">
+            <span className="text-xs tracking-widest uppercase text-secondary/60">
               Oficinas
             </span>
-            <h3 className="font-serif text-2xl text-stone-100">
+            <h3 className="font-serif text-2xl text-secondary">
               Palermo Hollywood
             </h3>
-            <p className="text-stone-400 text-sm leading-relaxed">
+                <p className="text-secondary/70 text-sm leading-relaxed">
               Contamos con oficinas modernas en Palermo Hollywood para darte la
               mayor seguridad posible. Tenemos todo lo necesario para dar el
               mejor servicio.
             </p>
-            <address className="not-italic text-stone-500 text-sm">
+            <address className="not-italic text-secondary/60 text-sm">
               Arévalo 1880, Piso 2 — Palermo, CABA
             </address>
           </div>
@@ -256,18 +256,18 @@ export default function HomePage() {
       </section>
 
       {/* Proceso */}
-      <section className="py-28 bg-amber-400">
+      <section className="py-28 bg-primary">
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-6">
-            <h2 className="font-serif text-4xl md:text-5xl text-stone-950 leading-tight">
+            <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight">
               Simplificamos al extremo el proceso de venta de tu hogar.
             </h2>
-            <p className="text-stone-900/70 leading-relaxed">
+            <p className="text-white/70 leading-relaxed">
               TE ACOMPAÑAMOS EN TODO EL PROCESO
             </p>
           </div>
           <div className="flex flex-col gap-5">
-            <p className="text-stone-950/80 leading-relaxed">
+            <p className="text-white/80 leading-relaxed">
               Nos encargamos de publicar la propiedad, realizar una estrategia
               de acciones proactivas para concretar la venta, gestionar las
               consultas, precalificar clientes, organizar las visitas, negociar
@@ -275,7 +275,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/contacto"
-              className="inline-flex items-center gap-3 bg-stone-950 text-amber-400 hover:bg-stone-900 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold self-start"
+              className="inline-flex items-center gap-3 bg-white text-primary hover:bg-white/90 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold self-start"
             >
               Quiero vender
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -298,13 +298,13 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-stone-800">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-primary/20">
             {faqs.map((faq, i) => (
-              <div key={i} className="bg-stone-950 p-8 hover:bg-stone-900/60 transition-colors">
-                <h3 className="font-serif text-lg text-amber-400 mb-3">
+              <div key={i} className="bg-white p-8 hover:bg-primary/5 transition-colors">
+                <h3 className="font-serif text-lg text-primary mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-stone-400 text-sm leading-relaxed">
+            <p className="text-secondary/70 text-sm leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
@@ -314,9 +314,9 @@ export default function HomePage() {
       </section>
 
       {/* CTA final */}
-      <section className="py-20 border-t border-stone-800">
+      <section className="py-20 border-t border-primary/20">
         <div className="mx-auto max-w-7xl px-6 text-center flex flex-col items-center gap-8">
-          <h2 className="font-serif text-4xl md:text-5xl text-stone-50 max-w-xl">
+          <h2 className="font-serif text-4xl md:text-5xl text-secondary max-w-xl">
             ¿Listo para vender tu propiedad?
           </h2>
           <a
