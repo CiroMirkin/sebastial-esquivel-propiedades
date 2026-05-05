@@ -89,13 +89,13 @@ export default function HomePage() {
 
         <div className="relative mx-auto max-w-7xl px-6 py-28 grid grid-cols-1 lg:grid-cols-[65%_1fr] gap-16 items-center">
           <Reveal className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 md:p-12 flex flex-col gap-8">
-            <span className="text-xs tracking-[0.3em] uppercase text-white/60 font-medium">
+            <span className="text-xs tracking-[0.3em] uppercase text-black/60 font-medium">
               Especialistas en Zona Oeste y CABA
             </span>
-            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-white text-balance">
+            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-black text-balance">
               Vendé tu propiedad al mejor precio, rápido y sin estrés.
             </h1>
-            <p className="text-white/80 text-lg leading-relaxed max-w-md">
+            <p className="text-black/80 text-lg leading-relaxed max-w-md">
               Publicá con el mejor estándar de calidad. Vendé con nuestro plan
               de comercialización premium y las últimas innovaciones
               tecnológicas.
@@ -103,7 +103,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4 pt-2">
               <Link
                 href="/contacto"
-                className="inline-flex items-center gap-3 bg-white text-primary hover:bg-white/90 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold"
+                className="inline-flex items-center gap-3 bg-black text-white hover:bg-black/90 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold"
               >
                 Quiero vender
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -112,7 +112,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/servicios"
-                className="inline-flex items-center gap-3 border border-white/60 text-white hover:border-white hover:bg-white/10 transition-colors px-8 py-4 text-xs tracking-widest uppercase"
+                className="inline-flex items-center gap-3 border border-black/30 text-black hover:border-black hover:bg-black/5 transition-colors px-8 py-4 text-xs tracking-widest uppercase"
               >
                 Ver servicios
               </Link>
@@ -126,11 +126,11 @@ export default function HomePage() {
               { value: "360°", label: "Recorrido virtual incluido" },
               { value: "3 portales", label: "Publicación destacada" },
             ].map((stat, i) => (
-              <Reveal key={stat.label} delay={i * 0.1} className="border border-white/30 bg-white/10 backdrop-blur-sm p-6 flex flex-col gap-2">
-                <span className="font-serif text-3xl text-white">
+              <Reveal key={stat.label} delay={i * 0.1} className="border border-black/20 bg-white/20 backdrop-blur-sm p-6 flex flex-col gap-2">
+                <span className="font-serif text-3xl text-black">
                   {stat.value}
                 </span>
-                <span className="text-xs text-white/70 leading-snug">
+                <span className="text-xs text-black/70 leading-snug">
                   {stat.label}
                 </span>
               </Reveal>
