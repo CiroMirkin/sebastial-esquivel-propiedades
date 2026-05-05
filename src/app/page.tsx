@@ -140,33 +140,33 @@ export default function HomePage() {
       </section>
 
       {/* Servicios */}
-      <section className="py-28 bg-primary/5">
+      <section className="py-28 bg-primary-50">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
-              <span className="text-xs tracking-[0.3em] uppercase text-primary block mb-4">
+              <span className="text-xs tracking-[0.3em] uppercase text-primary-600 block mb-4">
                 Servicios
               </span>
-              <h2 className="font-serif text-4xl md:text-5xl text-secondary">
+              <h2 className="font-serif text-4xl md:text-5xl text-secondary-800">
                 Nuestro Estándar de Calidad
               </h2>
             </div>
-            <p className="text-secondary/70 max-w-sm text-sm leading-relaxed">
+            <p className="text-secondary-600 max-w-sm text-sm leading-relaxed">
               Te contamos cómo vendemos en menos de 4 meses
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary/20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-200">
             {services.map((service, i) => (
               <Reveal key={i} delay={i * 0.08}>
-                <div className="bg-white p-7 flex flex-col gap-3 hover:bg-primary/5 transition-colors group">
-                  <span className="text-xs text-primary/60 font-mono">
+                <div className="h-full bg-white p-7 flex flex-col gap-3 hover:bg-primary-50 transition-colors group">
+                  <span className="text-xs text-primary-500/80 font-mono">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="font-serif text-lg text-secondary group-hover:text-primary transition-colors">
+                  <h3 className="font-serif text-lg text-secondary-800 group-hover:text-primary-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-secondary/60 text-sm leading-relaxed">
+                  <p className="text-secondary-500 text-sm leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -175,14 +175,14 @@ export default function HomePage() {
           </div>
 
           <Reveal>
-            <div className="mt-8 p-6 border border-primary/20 bg-primary/5">
-              <p className="text-secondary/70 text-sm">
-                <span className="text-primary font-medium">
+            <div className="mt-8 p-6 border border-primary-200 bg-primary-100/50">
+              <p className="text-secondary-700 text-sm">
+                <span className="text-primary-600 font-medium">
                   Amoblamiento virtual incluido:{" "}
                 </span>
                 Realizamos un amoblamiento virtual sobre ambientes vacíos para
                 generar un mejor y mayor impacto.{" "}
-                <span className="text-secondary font-medium uppercase text-xs tracking-wider">
+                <span className="text-secondary-900 font-medium uppercase text-xs tracking-wider">
                   Hacemos que tu propiedad se vuelva irresistible.
                 </span>
               </p>
@@ -193,7 +193,7 @@ export default function HomePage() {
             <div className="mt-8 flex justify-start">
               <Link
                 href="/servicios"
-                className="inline-flex items-center gap-3 border border-primary/40 text-primary hover:bg-primary hover:text-white transition-all px-7 py-3 text-xs tracking-widest uppercase"
+                className="inline-flex items-center gap-3 border border-primary-400 text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all px-7 py-3 text-xs tracking-widest uppercase"
               >
                 Ver más
               </Link>
@@ -203,20 +203,20 @@ export default function HomePage() {
       </section>
 
       {/* Sobre Sebastian */}
-      <section className="py-28">
+      <section className="py-28 bg-white">
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <Reveal className="flex flex-col gap-7">
-            <span className="text-xs tracking-[0.3em] uppercase text-primary">
+            <span className="text-xs tracking-[0.3em] uppercase text-primary-600">
               El fundador
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-secondary">
+            <h2 className="font-serif text-4xl md:text-5xl text-secondary-900">
               Sebastian Esquivel
             </h2>
-            <p className="text-secondary/70 leading-relaxed">
+            <p className="text-secondary-600 leading-relaxed">
               Nací en Ramos Mejía, Zona Oeste. Me recibí de Martillero, Corredor
               y Tasador Público a principios del 2021 y empecé a trabajar de
               forma independiente. En 2023 fundé{" "}
-              <span className="text-secondary font-medium">
+              <span className="text-secondary-900 font-medium">
                 Sebastian Esquivel Propiedades
               </span>
               . Me sigo capacitando diariamente sobre el mercado inmobiliario y
@@ -224,35 +224,35 @@ export default function HomePage() {
               Abogacía en la UNLAM.
             </p>
             <div className="flex flex-col gap-1">
-              <span className="text-xs text-secondary/40 tracking-wider uppercase">
+              <span className="text-xs text-secondary-400 tracking-wider uppercase">
                 Matrícula
               </span>
-              <span className="text-secondary/70 text-sm">
+              <span className="text-secondary-700 text-sm">
                 CMCPDJLM 1074 | CUCICBA 9497
               </span>
             </div>
             <Link
               href="/equipo"
-              className="inline-flex items-center gap-3 border border-secondary/30 text-secondary hover:border-primary hover:text-primary transition-colors px-7 py-3 text-xs tracking-widest uppercase self-start"
+              className="inline-flex items-center gap-3 border border-secondary-200 text-secondary-700 hover:border-primary-500 hover:text-primary-600 transition-colors px-7 py-3 text-xs tracking-widest uppercase self-start"
             >
               Conocé al equipo
             </Link>
           </Reveal>
 
           <Reveal delay={0.15}>
-            <div className="border border-primary/20 p-8 bg-primary/5 flex flex-col gap-6">
-              <span className="text-xs tracking-widest uppercase text-secondary/60">
+            <div className="border border-primary-100 p-8 bg-primary-50 flex flex-col gap-6">
+              <span className="text-xs tracking-widest uppercase text-secondary-500">
                 Oficinas
               </span>
-              <h3 className="font-serif text-2xl text-secondary">
+              <h3 className="font-serif text-2xl text-secondary-900">
                 Palermo Hollywood
               </h3>
-              <p className="text-secondary/70 text-sm leading-relaxed">
+              <p className="text-secondary-600 text-sm leading-relaxed">
                 Contamos con oficinas modernas en Palermo Hollywood para darte la
                 mayor seguridad posible. Tenemos todo lo necesario para dar el
                 mejor servicio.
               </p>
-              <address className="not-italic text-secondary/60 text-sm">
+              <address className="not-italic text-secondary-500 text-sm">
                 Arévalo 1880, Piso 2 — Palermo, CABA
               </address>
             </div>
@@ -261,18 +261,18 @@ export default function HomePage() {
       </section>
 
       {/* Proceso */}
-      <section className="py-28 bg-primary">
+      <section className="py-28 bg-gradient-to-br from-primary-600 to-secondary-800">
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <Reveal className="flex flex-col gap-6">
             <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight">
               Simplificamos al extremo el proceso de venta de tu hogar.
             </h2>
-            <p className="text-white/70 leading-relaxed">
+            <p className="text-primary-100 leading-relaxed">
               TE ACOMPAÑAMOS EN TODO EL PROCESO
             </p>
           </Reveal>
           <Reveal delay={0.15} className="flex flex-col gap-5">
-            <p className="text-white/80 leading-relaxed">
+            <p className="text-white/90 leading-relaxed">
               Nos encargamos de publicar la propiedad, realizar una estrategia
               de acciones proactivas para concretar la venta, gestionar las
               consultas, precalificar clientes, organizar las visitas, negociar
@@ -280,7 +280,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/contacto"
-              className="inline-flex items-center gap-3 bg-white text-primary hover:bg-white/90 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold self-start"
+              className="inline-flex items-center gap-3 bg-white text-primary-700 hover:bg-primary-50 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold self-start"
             >
               Quiero vender
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -292,25 +292,25 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-28">
+      <section className="py-28 bg-secondary-50">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="mb-14">
-            <span className="text-xs tracking-[0.3em] uppercase text-primary block mb-4">
+            <span className="text-xs tracking-[0.3em] uppercase text-primary-600 block mb-4">
               FAQ
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-secondary">
+            <h2 className="font-serif text-4xl md:text-5xl text-secondary-900">
               Preguntas Frecuentes
             </h2>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-primary/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-primary-200">
             {faqs.map((faq, i) => (
               <Reveal key={i} delay={i * 0.08}>
-                <div className="bg-white p-8 hover:bg-primary/5 transition-colors">
-                  <h3 className="font-serif text-lg text-primary mb-3">
+                <div className="h-full bg-white p-8 hover:bg-primary-50 transition-colors">
+                  <h3 className="font-serif text-lg text-primary-600 mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-secondary/70 text-sm leading-relaxed">
+                  <p className="text-secondary-600 text-sm leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -321,14 +321,14 @@ export default function HomePage() {
       </section>
 
       {/* CTA final */}
-      <section className="py-20 border-t border-primary/20">
+      <section className="py-20 bg-secondary-900">
         <Reveal className="mx-auto max-w-7xl px-6 text-center flex flex-col items-center gap-8">
-          <h2 className="font-serif text-4xl md:text-5xl text-secondary max-w-xl">
+          <h2 className="font-serif text-4xl md:text-5xl text-white max-w-xl">
             ¿Listo para vender tu propiedad?
           </h2>
           <a
             href="https://api.whatsapp.com/send/?phone=5491137775276&text=Hola%20Sebasti%C3%A1n%2C%20me%20interesa%20vender%20mi%20propiedad.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F&type=phone_number&app_absent=0"
-            className="inline-flex items-center gap-3 bg-primary text-white hover:bg-primary/90 transition-colors px-10 py-4 text-xs tracking-widest uppercase font-semibold"
+            className="inline-flex items-center gap-3 bg-primary-500 text-white hover:bg-primary-600 transition-colors px-10 py-4 text-xs tracking-widest uppercase font-semibold"
           >
             Escribinos por WhatsApp
           </a>
