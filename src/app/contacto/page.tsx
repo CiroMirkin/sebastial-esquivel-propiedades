@@ -55,7 +55,7 @@ export default function ContactoPage() {
                   <p className="text-xs tracking-widest uppercase text-secondary/60 mb-1">
                     Email
                   </p>
-                  <p className="text-stone-200 group-hover:text-amber-400 transition-colors font-medium break-all">
+                  <p className="text-secondary group-hover:text-primary transition-colors font-medium break-all">
                     sebastianesquivel@deinmobiliarios.com
                   </p>
                 </div>
@@ -139,12 +139,12 @@ export default function ContactoPage() {
               </div>
             </div>
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs tracking-widest uppercase text-stone-500">
+              <label className="text-xs tracking-widest uppercase text-secondary/60">
                 Mensaje
               </label>
               <textarea
                 rows={4}
-                className="bg-stone-900 border border-stone-700 focus:border-amber-400/60 outline-none text-stone-200 px-4 py-3 text-sm transition-colors placeholder:text-stone-600 resize-none"
+                className="bg-white border border-secondary/30 focus:border-primary/60 outline-none text-secondary px-4 py-3 text-sm transition-colors placeholder:text-secondary/40 resize-none"
                 placeholder="Contanos sobre tu propiedad..."
               />
             </div>

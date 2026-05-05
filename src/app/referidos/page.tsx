@@ -125,7 +125,7 @@ export default function ReferidosPage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="flex items-center justify-between border-b border-stone-800 pb-3"
+                  className="flex items-center justify-between border-b border-primary/20 pb-3"
                 >
                   <span className="text-secondary/60 text-sm">{item.label}</span>
                   <span className="text-primary text-sm font-medium">
@@ -185,7 +185,7 @@ export default function ReferidosPage() {
               </a>
               <a
                 href="mailto:sebastianesquivel@deinmobiliarios.com"
-                className="flex items-center gap-3 text-stone-300 hover:text-amber-400 transition-colors text-sm break-all"
+                className="flex items-center gap-3 text-secondary hover:text-primary transition-colors text-sm break-all"
               >
                   <span className="w-8 h-8 border border-secondary/30 flex items-center justify-center shrink-0">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">

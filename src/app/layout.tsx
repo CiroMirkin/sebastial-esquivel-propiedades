@@ -168,7 +168,7 @@ export default function RootLayout({
               </a>
               <a
                 href="mailto:sebastianesquivel@deinmobiliarios.com"
-                className="text-sm text-stone-400 hover:text-amber-400 transition-colors break-all"
+                className="text-sm text-secondary/70 hover:text-primary transition-colors break-all"
               >
                 sebastianesquivel@deinmobiliarios.com
               </a>

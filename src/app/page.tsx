@@ -80,19 +80,21 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-white">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(81,154,207,0.08),_transparent_60%)]" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/hero.avif" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/50" />
+        </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 py-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="flex flex-col gap-8">
-            <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium">
+        <div className="relative mx-auto max-w-7xl px-6 py-28 grid grid-cols-1 lg:grid-cols-[65%_1fr] gap-16 items-center">
+          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 md:p-12 flex flex-col gap-8">
+            <span className="text-xs tracking-[0.3em] uppercase text-black/60 font-medium">
               Especialistas en Zona Oeste y CABA
             </span>
-            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-secondary text-balance">
+            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-black text-balance">
               Vendé tu propiedad al mejor precio, rápido y sin estrés.
             </h1>
-            <p className="text-secondary/70 text-lg leading-relaxed max-w-md">
+            <p className="text-black/80 text-lg leading-relaxed max-w-md">
               Publicá con el mejor estándar de calidad. Vendé con nuestro plan
               de comercialización premium y las últimas innovaciones
               tecnológicas.
@@ -100,7 +102,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4 pt-2">
               <Link
                 href="/contacto"
-                className="inline-flex items-center gap-3 bg-primary text-white hover:bg-primary/90 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold"
+                className="inline-flex items-center gap-3 bg-white text-primary hover:bg-white/90 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold"
               >
                 Quiero vender
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -109,14 +111,14 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/servicios"
-                className="inline-flex items-center gap-3 border border-secondary/30 text-secondary hover:border-primary hover:text-primary transition-colors px-8 py-4 text-xs tracking-widest uppercase"
+                className="inline-flex items-center gap-3 border border-white/60 text-white hover:border-white hover:bg-white/10 transition-colors px-8 py-4 text-xs tracking-widest uppercase"
               >
                 Ver servicios
               </Link>
             </div>
           </div>
 
-          <div className="hidden lg:grid grid-cols-2 gap-3">
+          <div className="flex lg:flex-col flex-wrap gap-3">
             {[
               { value: "-4 meses", label: "Tiempo promedio de venta" },
               { value: "+40", label: "Inmobiliarias en red" },
@@ -125,12 +127,12 @@ export default function HomePage() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="border border-primary/20 bg-primary/5 p-6 flex flex-col gap-2"
+                className="border border-white/30 bg-white/10 backdrop-blur-sm p-6 flex flex-col gap-2"
               >
-                <span className="font-serif text-3xl text-primary">
+                <span className="font-serif text-3xl text-black">
                   {stat.value}
                 </span>
-                <span className="text-xs text-secondary/60 leading-snug">
+                <span className="text-xs text-black/70 leading-snug">
                   {stat.label}
                 </span>
               </div>
@@ -144,7 +146,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
-              <span className="text-xs tracking-[0.3em] uppercase text-amber-400 block mb-4">
+              <span className="text-xs tracking-[0.3em] uppercase text-primary block mb-4">
                 Servicios
               </span>
               <h2 className="font-serif text-4xl md:text-5xl text-secondary">
@@ -203,7 +205,7 @@ export default function HomePage() {
       <section className="py-28">
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="flex flex-col gap-7">
-            <span className="text-xs tracking-[0.3em] uppercase text-amber-400">
+            <span className="text-xs tracking-[0.3em] uppercase text-primary">
               El fundador
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-secondary">
@@ -290,10 +292,10 @@ export default function HomePage() {
       <section className="py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14">
-            <span className="text-xs tracking-[0.3em] uppercase text-amber-400 block mb-4">
+            <span className="text-xs tracking-[0.3em] uppercase text-primary block mb-4">
               FAQ
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-stone-50">
+            <h2 className="font-serif text-4xl md:text-5xl text-secondary">
               Preguntas Frecuentes
             </h2>
           </div>
@@ -321,7 +323,7 @@ export default function HomePage() {
           </h2>
           <a
             href="https://api.whatsapp.com/send/?phone=5491137775276&text=Hola%20Sebasti%C3%A1n%2C%20me%20interesa%20vender%20mi%20propiedad.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F&type=phone_number&app_absent=0"
-            className="inline-flex items-center gap-3 bg-amber-400 text-stone-950 hover:bg-amber-300 transition-colors px-10 py-4 text-xs tracking-widest uppercase font-semibold"
+            className="inline-flex items-center gap-3 bg-primary text-white hover:bg-primary/90 transition-colors px-10 py-4 text-xs tracking-widest uppercase font-semibold"
           >
             Escribinos por WhatsApp
           </a>
