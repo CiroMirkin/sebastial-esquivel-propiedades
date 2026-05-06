@@ -152,7 +152,7 @@ export default function HomePage() {
                 Nuestro Estándar de Calidad
               </h2>
             </div>
-            <p className="text-secondary-600 max-w-sm text-sm leading-relaxed">
+            <p className="text-secondary-600 max-w-lg text-base leading-relaxed">
               Te contamos cómo vendemos en menos de 4 meses
             </p>
           </Reveal>
@@ -161,13 +161,13 @@ export default function HomePage() {
             {services.map((service, i) => (
               <Reveal key={i} delay={i * 0.08}>
                 <div className="h-full bg-white p-7 flex flex-col gap-3 hover:bg-primary-50 transition-colors group">
-                  <span className="text-xs text-primary-500/80 font-mono">
+                  <span className="text-md text-primary-500/80 font-mono">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="font-serif text-lg text-secondary-800 group-hover:text-primary-600 transition-colors">
+                  <h3 className="font-serif text-2xl text-secondary-800 group-hover:text-primary-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-secondary-500 text-sm leading-relaxed">
+                  <p className="text-secondary-500 text-lg leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -185,7 +185,7 @@ export default function HomePage() {
                   </h2>
                 </Reveal>
                 <Reveal>
-                <p className="text-xs tracking-[0.3em] uppercase text-primary-600 font-medium">
+                <p className="mb-4 text-xs tracking-[0.3em] uppercase text-primary-600 font-medium">
                   Hacemos que tu propiedad se vuelva irresistible.
                 </p>
                 <p className="text-secondary-700 leading-relaxed">
@@ -407,10 +407,10 @@ export default function HomePage() {
             {faqs.map((faq, i) => (
               <Reveal key={i} delay={i * 0.08}>
                 <div className="h-full bg-white p-8 hover:bg-primary-50 transition-colors">
-                  <h3 className="font-serif text-lg text-primary-600 mb-3">
+                  <h3 className="font-serif text-2xl text-primary-600 mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-secondary-600 text-sm leading-relaxed">
+                  <p className="text-secondary-600 text-lg leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
