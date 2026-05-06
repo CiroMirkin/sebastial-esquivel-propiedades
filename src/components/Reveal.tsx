@@ -7,7 +7,7 @@ const variants = {
   visible: { opacity: 1, y: 0 },
 }
 
-export default function Reveal({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
+export function Reveal({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
   const shouldReduce = useReducedMotion()
 
   return (

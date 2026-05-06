@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Reveal from "@/components/Reveal";
+import { ImageCompare, Reveal } from "@/components";
 
 const services = [
   {
@@ -81,13 +81,13 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src="/hero.avif" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/50" />
+          <div className="absolute inset-0 bg-linear-to-br from-primary/40 to-secondary/50" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 py-28 grid grid-cols-1 lg:grid-cols-[65%_1fr] gap-16 items-center">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 grid grid-cols-1 lg:grid-cols-[65%_1fr] gap-16 items-center">
           <Reveal className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 md:p-12 flex flex-col gap-8">
             <span className="text-xs tracking-[0.3em] uppercase text-black/60 font-medium">
               Especialistas en Zona Oeste y CABA
@@ -119,14 +119,14 @@ export default function HomePage() {
             </div>
           </Reveal>
 
-          <div className="flex lg:flex-col flex-wrap gap-3">
+          <div className="flex lg:flex-col justify-center flex-wrap gap-3">
             {[
               { value: "-4 meses", label: "Tiempo promedio de venta" },
               { value: "+40", label: "Inmobiliarias en red" },
               { value: "360°", label: "Recorrido virtual incluido" },
               { value: "3 portales", label: "Publicación destacada" },
             ].map((stat, i) => (
-              <Reveal key={stat.label} delay={i * 0.1} className="border border-black/20 bg-white/20 backdrop-blur-sm p-6 flex flex-col gap-2">
+              <Reveal key={stat.label} delay={i * 0.1} className="border border-black/20 bg-white/20 backdrop-blur-sm p-6 flex flex-col gap-2 rounded">
                 <span className="font-serif text-3xl text-black">
                   {stat.value}
                 </span>
@@ -174,31 +174,39 @@ export default function HomePage() {
             ))}
           </div>
 
-          <Reveal>
-            <div className="mt-8 p-6 border border-primary-200 bg-primary-100/50">
-              <p className="text-secondary-700 text-sm">
-                <span className="text-primary-600 font-medium">
-                  Amoblamiento virtual incluido:{" "}
-                </span>
-                Realizamos un amoblamiento virtual sobre ambientes vacíos para
-                generar un mejor y mayor impacto.{" "}
-                <span className="text-secondary-900 font-medium uppercase text-xs tracking-wider">
+          {/* Amoblamiento Virtual - Comparativa */}
+          
+            <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border border-primary-200 bg-white p-8 md:p-10 rounded-lg">
+              <div className="flex flex-col gap-5">
+                <Reveal>
+                  <h2 className="font-serif text-4xl md:text-5xl text-secondary-800">
+                    Amoblamiento virtual incluido
+                  </h2>
+                </Reveal>
+                <Reveal>
+                <p className="text-xs tracking-[0.3em] uppercase text-primary-600 font-medium">
                   Hacemos que tu propiedad se vuelva irresistible.
-                </span>
-              </p>
+                </p>
+                <p className="text-secondary-700 leading-relaxed">
+                  Realizamos un amoblamiento virtual sobre ambientes vacíos para
+                  generar un mejor y mayor impacto.
+                </p>
+                </Reveal>
+                <Reveal>
+                  <div className="mt-8 flex justify-start">
+                    <Link
+                      href="/servicios"
+                      className="inline-flex items-center gap-3 border border-primary-400 text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all px-7 py-3 text-xs tracking-widest uppercase"
+                    >
+                      Ver más
+                    </Link>
+                  </div>
+                </Reveal>
+              </div>
+              <div className="w-full">
+                <ImageCompare />
+              </div>
             </div>
-          </Reveal>
-
-          <Reveal>
-            <div className="mt-8 flex justify-start">
-              <Link
-                href="/servicios"
-                className="inline-flex items-center gap-3 border border-primary-400 text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all px-7 py-3 text-xs tracking-widest uppercase"
-              >
-                Ver más
-              </Link>
-            </div>
-          </Reveal>
         </div>
       </section>
 
