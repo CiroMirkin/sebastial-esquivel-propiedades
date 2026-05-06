@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import { WhatsAppButton } from "@/components";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -40,6 +41,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${playfair.variable} ${dmSans.variable}`}>
+      <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
       <body className="bg-white text-secondary font-sans antialiased">
         <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/20 bg-primary/90 backdrop-blur-md">
           <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-16">
@@ -205,6 +210,7 @@ export default function RootLayout({
             © {new Date().getFullYear()} Sebastian Esquivel Propiedades — Todos los derechos reservados
           </div>
         </footer>
+        <WhatsAppButton />
       </body>
     </html>
   );
