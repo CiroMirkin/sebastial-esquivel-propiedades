@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ImageCompare, Reveal } from "@/components";
+import Image from "next/image";
 
 const services = [
   {
@@ -211,42 +212,95 @@ export default function HomePage() {
       </section>
 
       {/* Sobre Sebastian */}
-      <section className="py-28 bg-white">
-        <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <Reveal className="flex flex-col gap-7">
-            <span className="text-xs tracking-[0.3em] uppercase text-primary-600">
-              El fundador
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-secondary-900">
-              Sebastian Esquivel
-            </h2>
-            <p className="text-secondary-600 leading-relaxed">
-              Nací en Ramos Mejía, Zona Oeste. Me recibí de Martillero, Corredor
-              y Tasador Público a principios del 2021 y empecé a trabajar de
-              forma independiente. En 2023 fundé{" "}
-              <span className="text-secondary-900 font-medium">
-                Sebastian Esquivel Propiedades
-              </span>
-              . Me sigo capacitando diariamente sobre el mercado inmobiliario y
-              las nuevas tecnologías. Actualmente curso el cuarto año de
-              Abogacía en la UNLAM.
-            </p>
-            <div className="flex flex-col gap-1">
-              <span className="text-xs text-secondary-400 tracking-wider uppercase">
-                Matrícula
-              </span>
-              <span className="text-secondary-700 text-sm">
-                CMCPDJLM 1074 | CUCICBA 9497
-              </span>
-            </div>
-            <Link
-              href="/equipo"
-              className="inline-flex items-center gap-3 border border-secondary-200 text-secondary-700 hover:border-primary-500 hover:text-primary-600 transition-colors px-7 py-3 text-xs tracking-widest uppercase self-start"
-            >
-              Conocé al equipo
-            </Link>
-          </Reveal>
+      <section className="pt-28 pb-8 bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
+             <Reveal className="md:w-1/2 order-2 md:order-0 lg:block hidden">
+              <div className="relative">
+                <Image
+                  className="w-full h-auto object-cover rounded shadow-xl"
+                  src="/sebastian-esquivel.avif"
+                  alt="Sebastian Esquivel Fundador"
+                  height={600}
+                  width={480}
+                  priority
+                />
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary-100 rounded-full -z-10 hidden md:block" />
+              </div>
+            </Reveal>
 
+            <Reveal className="flex flex-col gap-7 md:w-1/2 order-1 md:order-0">
+              <span className="text-xs tracking-[0.3em] uppercase text-primary-600">
+                El fundador
+              </span>
+              <h2 className="font-serif text-4xl md:text-5xl text-secondary-900">
+                Sebastian Esquivel
+              </h2>
+              <p className="text-secondary-600 leading-relaxed">
+                Nací en Ramos Mejía, Zona Oeste. Me recibí de Martillero, Corredor
+                y Tasador Público a principios del 2021 y empecé a trabajar de
+                forma independiente. En 2023 fundé{" "}
+                <span className="text-secondary-900 font-medium">
+                  Sebastian Esquivel Propiedades
+                </span>
+                . Me sigo capacitando diariamente sobre el mercado inmobiliario y
+                las nuevas tecnologías. Actualmente curso el cuarto año de
+                Abogacía en la UNLAM.
+              </p>
+              <div className="lg:block hidden">
+                <div className="flex flex-col gap-1">
+                  <span className="text-xs text-secondary-400 tracking-wider uppercase">
+                    Matrícula
+                  </span>
+                  <span className="text-secondary-700 text-sm">
+                    CMCPDJLM 1074 | CUCICBA 9497
+                  </span>
+                </div>
+                <Link
+                  href="/equipo"
+                  className="mt-6 inline-flex items-center gap-3 border border-secondary-200 text-secondary-700 hover:border-primary-500 hover:text-primary-600 transition-colors px-7 py-3 text-xs tracking-widest uppercase self-start"
+                >
+                  Conocé al equipo
+                </Link>
+              </div>
+            </Reveal>
+
+            <Reveal className="md:w-1/2 order-2 md:order-0 lg:hidden block">
+              <div className="relative">
+                <Image
+                  className="w-full h-auto object-cover rounded shadow-xl"
+                  src="/sebastian-esquivel.avif"
+                  alt="Sebastian Esquivel Fundador"
+                  height={600}
+                  width={480}
+                  priority
+                />
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary-100 rounded-full -z-10 hidden md:block" />
+              </div>
+              <div className="mt-6 block lg:hidden">
+                <div className="flex flex-col gap-1">
+                  <span className="text-xs text-secondary-400 tracking-wider uppercase">
+                    Matrícula
+                  </span>
+                  <span className="text-secondary-700 text-sm">
+                    CMCPDJLM 1074 | CUCICBA 9497
+                  </span>
+                </div>
+                <Link
+                  href="/equipo"
+                  className="mt-6 inline-flex items-center gap-3 border border-secondary-200 text-secondary-700 hover:border-primary-500 hover:text-primary-600 transition-colors px-7 py-3 text-xs tracking-widest uppercase self-start"
+                >
+                  Conocé al equipo
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Sobre Oficinas */}
+      <section className="pb-28 bg-white">
+        <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <Reveal delay={0.15}>
             <div className="border border-primary-100 p-8 bg-primary-50 flex flex-col gap-6">
               <span className="text-xs tracking-widest uppercase text-secondary-500">
@@ -263,6 +317,44 @@ export default function HomePage() {
               <address className="not-italic text-secondary-500 text-sm">
                 Arévalo 1880, Piso 2 — Palermo, CABA
               </address>
+            </div>
+          </Reveal>
+          
+          <Reveal>
+            {/* Grilla de imágenes */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <Image
+                  src="/office-1.avif"
+                  alt="Oficina en Palermo Hollywood - Vista principal"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto object-cover rounded-lg shadow-md"
+                />
+                <Image
+                  src="/office-3.avif"
+                  alt="Oficina en Palermo Hollywood - Sala de reuniones"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto object-cover rounded-lg shadow-md"
+                />
+              </div>
+              <div className="space-y-4 pt-8">
+                <Image
+                  src="/office-2.avif"
+                  alt="Oficina en Palermo Hollywood - Espacio de trabajo"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto object-cover rounded-lg shadow-md"
+                />
+                <Image
+                  src="/office-4.avif"
+                  alt="Oficina en Palermo Hollywood - Recepción"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto object-cover rounded-lg shadow-md"
+                />
+              </div>
             </div>
           </Reveal>
         </div>

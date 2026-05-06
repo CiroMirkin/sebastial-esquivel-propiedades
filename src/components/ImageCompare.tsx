@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState, useRef, useCallback, useEffect } from "react"
 
 const images = [
@@ -141,7 +142,9 @@ export function ImageCompare() {
         tabIndex={0}
       >
         {/* Después (fondo completo) */}
-        <img
+        <Image
+          width={1200}
+          height={900}
           src={images[activeIndex].after}
           alt="Ambiente amoblado virtualmente"
           className={`absolute inset-0 w-full h-full object-cover ${transitionClasses}`}
@@ -153,7 +156,9 @@ export function ImageCompare() {
           className={`absolute inset-0 overflow-hidden ${transitionClasses}`}
           style={{ width: `${sliderPos}%` }}
         >
-          <img
+          <Image
+            width={1200}
+            height={900}
             src={images[activeIndex].before}
             alt="Ambiente original sin amoblar"
             className="absolute inset-0 w-full h-full object-cover"
