@@ -428,9 +428,9 @@ export default function HomePage() {
           </h2>
           <a
             href="https://api.whatsapp.com/send/?phone=5491137775276&text=Hola%20Sebasti%C3%A1n%2C%20me%20interesa%20vender%20mi%20propiedad.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F&type=phone_number&app_absent=0"
-            className="inline-flex items-center gap-3 bg-primary-500 text-white hover:bg-primary-600 transition-colors px-10 py-4 text-xs tracking-widest uppercase font-semibold"
+            className="inline-flex items-center gap-3 bg-[#0D9488] text-white hover:bg-primary-600 transition-colors px-10 py-4 text-xs tracking-widest uppercase font-semibold"
           >
-            Escribinos por WhatsApp
+            <i className="fa-brands fa-whatsapp text-2xl"></i> <span>Escribinos por WhatsApp</span>
           </a>
         </Reveal>
       </section>
