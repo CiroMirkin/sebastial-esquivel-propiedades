@@ -84,19 +84,20 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/hero.avif" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-linear-to-br from-primary/40 to-secondary/50" />
+          <Image src="/hero.avif" alt="" className="w-full h-full object-cover object-top" height={1000}
+                  width={1600} />
+          <div className="absolute inset-0 bg-linear-to-br from-primary/40 to-secon60ary/50" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 py-16 grid grid-cols-1 lg:grid-cols-[65%_1fr] gap-16 items-center">
-          <Reveal className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 md:p-12 flex flex-col gap-8">
+        <div className="relative mx-auto max-w-8xl px-6 pb-9 flex flex-col gap-16">
+          <Reveal className="p-8 md:p-12  backdrop-blur-md md:backdrop-blur-none rounded flex flex-col gap-4">
             <span className="text-xs tracking-[0.3em] uppercase text-black/60 font-medium">
               Especialistas en Zona Oeste y CABA
             </span>
             <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-black text-balance">
               Vendé tu propiedad al mejor precio, rápido y sin estrés.
             </h1>
-            <p className="text-black/80 text-lg leading-relaxed max-w-md">
+            <p className="text-black/80 text-lg leading-relaxed max-w-xl pt-4">
               Publicá con el mejor estándar de calidad. Vendé con nuestro plan
               de comercialización premium y las últimas innovaciones
               tecnológicas.
@@ -119,24 +120,8 @@ export default function HomePage() {
               </Link>
             </div>
           </Reveal>
-
-          <div className="flex lg:flex-col justify-center flex-wrap gap-3">
-            {[
-              { value: "-4 meses", label: "Tiempo promedio de venta" },
-              { value: "+40", label: "Inmobiliarias en red" },
-              { value: "360°", label: "Recorrido virtual incluido" },
-              { value: "3 portales", label: "Publicación destacada" },
-            ].map((stat, i) => (
-              <Reveal key={stat.label} delay={i * 0.1} className="border border-black/20 bg-white/20 backdrop-blur-sm p-6 flex flex-col gap-2 rounded">
-                <span className="font-serif text-3xl text-black">
-                  {stat.value}
-                </span>
-                <span className="text-xs text-black/70 leading-snug">
-                  {stat.label}
-                </span>
-              </Reveal>
-            ))}
-          </div>
+          {/** Componente que genera espacio en blanco */}
+          <div className="w-2 h-8"></div>
         </div>
       </section>
 
@@ -152,10 +137,25 @@ export default function HomePage() {
                 Nuestro Estándar de Calidad
               </h2>
             </div>
-            <p className="text-secondary-600 max-w-sm text-sm leading-relaxed">
-              Te contamos cómo vendemos en menos de 4 meses
-            </p>
           </Reveal>
+
+          <div className="flex justify-start flex-wrap gap-3 mb-16">
+            {[
+              { value: "-4 meses", label: "Tiempo promedio de venta" },
+              { value: "+40", label: "Inmobiliarias en red" },
+              { value: "360°", label: "Recorrido virtual incluido" },
+              { value: "3 portales", label: "Publicación destacada" },
+            ].map((stat, i) => (
+              <Reveal key={stat.label} delay={i * 0.1} className="border border-black/20 bg-white/20 backdrop-blur-sm p-6 flex flex-col gap-2">
+                <span className="font-serif text-3xl text-black">
+                  {stat.value}
+                </span>
+                <span className="text-xs text-black/70 leading-snug">
+                  {stat.label}
+                </span>
+              </Reveal>
+            ))}
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-200">
             {services.map((service, i) => (
