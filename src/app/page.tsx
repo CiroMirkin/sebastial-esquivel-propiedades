@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ImageCompare, Reveal, Services } from "@/components";
+import { ImageCompare, Reveal, Services, WhatsAppCTA } from "@/components";
 import Image from "next/image";
 
 const faqs = [
@@ -153,7 +153,7 @@ export default function HomePage() {
       </section>
 
       {/* Sobre Sebastian */}
-      <section className="pt-28 pb-8 bg-white">
+      <section className="pt-10 md:pt-28 pb-8 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
           <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
              <Reveal className="md:w-1/2 order-2 md:order-0 lg:block hidden">
@@ -367,12 +367,7 @@ export default function HomePage() {
           <h2 className="font-serif text-4xl md:text-5xl text-white max-w-xl">
             ¿Listo para vender tu propiedad?
           </h2>
-          <a
-            href="https://api.whatsapp.com/send/?phone=5491137775276&text=Hola%20Sebasti%C3%A1n%2C%20me%20interesa%20vender%20mi%20propiedad.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F&type=phone_number&app_absent=0"
-            className="inline-flex items-center gap-3 bg-[#0D9488] text-white hover:bg-primary-600 transition-colors px-10 py-4 text-xs tracking-widest uppercase font-semibold"
-          >
-            <i className="fa-brands fa-whatsapp text-2xl"></i> <span>Escribinos por WhatsApp</span>
-          </a>
+          <WhatsAppCTA />
         </Reveal>
       </section>
     </>
