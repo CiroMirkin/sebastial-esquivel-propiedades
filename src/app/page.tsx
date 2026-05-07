@@ -1,49 +1,6 @@
 import Link from "next/link";
-import { ImageCompare, Reveal } from "@/components";
+import { ImageCompare, Reveal, Services } from "@/components";
 import Image from "next/image";
-
-const services = [
-  {
-    title: "Foto Profesional",
-    description:
-      "Tomadas por un estudio especializado para que tu propiedad se luzca al máximo.",
-  },
-  {
-    title: "Super Destacado",
-    description:
-      "Máxima exposición en los portales más destacados del mercado inmobiliario.",
-  },
-  {
-    title: "Video Profesional",
-    description:
-      "Escenas realizadas con estabilizador en movimiento y tomas panorámicas de los ambientes.",
-  },
-  {
-    title: "Tomas con Drone",
-    description:
-      "Para casas, terrenos o grandes inmuebles según zonas autorizadas.",
-  },
-  {
-    title: "Recorrido 360°",
-    description:
-      "Un recorrido exhaustivo en primera persona para pre-visitar y apreciar todos sus atributos.",
-  },
-  {
-    title: "Trabajo en Red",
-    description:
-      "Trabajamos dentro de un ecosistema colaborativo de más de 40 inmobiliarias.",
-  },
-  {
-    title: "Plano Profesional",
-    description:
-      "Planta redibujada por arquitectos para comprender mejor la distribución.",
-  },
-  {
-    title: "Seguimiento Semanal",
-    description:
-      "El propietario recibe semanalmente el informe con el embudo de ventas y probabilidad de venta.",
-  },
-];
 
 const faqs = [
   {
@@ -157,23 +114,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-200">
-            {services.map((service, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <div className="h-full bg-white p-7 flex flex-col gap-3 hover:bg-primary-50 transition-colors group">
-                  <span className="text-md text-primary-500/80 font-mono">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="font-serif text-2xl text-secondary-800 group-hover:text-primary-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-secondary-500 text-lg leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <Services />
 
           {/* Amoblamiento Virtual - Comparativa */}
           
