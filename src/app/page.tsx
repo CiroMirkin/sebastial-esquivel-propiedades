@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ImageCompare, ProcessCTA, Reveal, Services, WhatsAppCTA } from "@/components";
+import { ImageCompare, PartnersBar, ProcessCTA, Reveal, Services, WhatsAppCTA } from "@/components";
 import Image from "next/image";
 
 const faqs = [
@@ -303,9 +303,11 @@ export default function HomePage() {
 
       {/* Proceso */}
       <ProcessCTA />
-      
+
+      <PartnersBar />
+
       {/* FAQ */}
-      <section className="py-28 bg-secondary-50">
+      <section className="py-28 pt-18 bg-secondary-50">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="mb-14">
             <span className="text-xs tracking-[0.3em] uppercase text-primary-600 block mb-4">
