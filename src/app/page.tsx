@@ -74,7 +74,7 @@ const faqs = [
   {
     question: "¿Cómo funciona el esquema de referidos?",
     answer:
-      "El referidor identifica personas en su círculo que quieran vender, recomienda nuestro servicio y si la venta se concreta, recibe una comisión previamente establecida. Es una forma de ganar dinero simplemente estando atento.",
+      "El referidor identifica personas en su círculo que quieran vender, recomienda nuestro servicio y si la venta se concreta, recibe una comisión previamente establecida.",
   },
 ];
 
@@ -410,7 +410,7 @@ export default function HomePage() {
                   <h3 className="font-serif text-2xl text-primary-600 mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-secondary-600 text-lg leading-relaxed">
+                  <p className="text-secondary-600 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
