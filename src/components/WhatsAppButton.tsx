@@ -2,12 +2,12 @@
 
 import { motion } from 'motion/react'
 
-const WHATSAPP_MSG = 'Hola Sebastián, me interesa vender mi propiedad. ¿Podrías darme más información?';
+const WHATSAPP_URL = process.env.NEXT_PUBLIC_WHATSAPP_URL!
 
 export function WhatsAppButton() {
   return (
     <motion.a
-      href={`https://wa.me/549113777527?text=${encodeURIComponent(WHATSAPP_MSG)}`}
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noopener"
       aria-label="Contactar por WhatsApp"
