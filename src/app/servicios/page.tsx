@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { portals, Reveal, StaggeredGallery } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
+import KuulaTour from "@/components/KuulaTour";
 
 export const metadata: Metadata = {
   title: "Servicios",
@@ -162,6 +163,20 @@ export default function ServiciosPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="pb-24">
+        <Reveal className="px-6 max-w-7xl mx-auto">
+          <h2 className="font-serif text-4xl text-black">
+            Recorrido virtual 360°
+          </h2>
+          <p className="mt-2 mb-8 text-gray-500 text-lg max-w-2xl">
+            Una experiencia inmersiva para conocer y explorar cada ambiente de la propiedad antes de visitarla.
+          </p>
+          <KuulaTour
+            src="https://kuula.co/share/collection/7K4YN?logo=0&info=0&fs=1&vr=1&initload=0&thumbs=-1"
+          />
+        </Reveal>
       </section>
 
       {/* Tasación */}
