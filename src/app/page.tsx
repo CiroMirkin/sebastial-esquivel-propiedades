@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ImageCompare, PartnersBar, ProcessCTA, Reveal, Services, WhatsAppCTA } from "@/components";
+import { ImageCompare, PartnersBar, ProcessCTA, Reveal, Services, StaggeredGallery, WhatsAppCTA } from "@/components";
 import Image from "next/image";
 
 const faqs = [
@@ -261,43 +261,14 @@ export default function HomePage() {
             </div>
           </Reveal>
           
-          <Reveal>
-            {/* Grilla de imágenes */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <Image
-                  src="/office-1.avif"
-                  alt="Oficina en Palermo Hollywood - Vista principal"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto object-cover rounded-lg shadow-md"
-                />
-                <Image
-                  src="/office-3.avif"
-                  alt="Oficina en Palermo Hollywood - Sala de reuniones"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto object-cover rounded-lg shadow-md"
-                />
-              </div>
-              <div className="space-y-4 pt-8">
-                <Image
-                  src="/office-2.avif"
-                  alt="Oficina en Palermo Hollywood - Espacio de trabajo"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto object-cover rounded-lg shadow-md"
-                />
-                <Image
-                  src="/office-4.avif"
-                  alt="Oficina en Palermo Hollywood - Recepción"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto object-cover rounded-lg shadow-md"
-                />
-              </div>
-            </div>
-          </Reveal>
+          <StaggeredGallery
+            images={[
+              { src: "/office-1.avif", alt: "Oficina en Palermo Hollywood - Vista principal" },
+              { src: "/office-3.avif", alt: "Oficina en Palermo Hollywood - Sala de reuniones" },
+              { src: "/office-2.avif", alt: "Oficina en Palermo Hollywood - Espacio de trabajo" },
+              { src: "/office-4.avif", alt: "Oficina en Palermo Hollywood - Recepción" },
+            ]}
+          />
         </div>
       </section>
 
