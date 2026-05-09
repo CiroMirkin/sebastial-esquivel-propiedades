@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Reveal } from "./Reveal"
 
-const portals = [
+export const portals = [
   { href: "http://zonaprop.com.ar/", src: "/zonaprop.svg", alt: "Zonaprop", width: 120 },
   { href: "https://mudafy.com.ar/", src: "/mudafy.svg", alt: "Mudafy", width: 100 },
   { href: "https://www.mercadolibre.com.ar/", src: "/mercadolibre.webp", alt: "Mercado Libre", width: 120 },
