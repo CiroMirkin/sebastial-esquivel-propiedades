@@ -118,14 +118,14 @@ export default function HomePage() {
             </div>
           </Reveal>
 
-          <div className="flex justify-start flex-wrap gap-3 mb-16">
+          <div className="w-full flex justify-start flex-wrap gap-6 md:gap-8 mb-16">
             {[
               { value: "-4 meses", label: "Tiempo promedio de venta" },
               { value: "+40", label: "Inmobiliarias en red" },
               { value: "360°", label: "Recorrido virtual incluido" },
               { value: "3 portales", label: "Publicación destacada" },
             ].map((stat, i) => (
-              <Reveal key={stat.label} delay={i * 0.1} className="border border-black/20 bg-white/20 backdrop-blur-sm p-6 flex flex-col gap-2">
+              <Reveal key={stat.label} delay={i * 0.1} className="p-6 flex flex-col gap-2">
                 <span className="font-serif text-3xl text-black">
                   {stat.value}
                 </span>
