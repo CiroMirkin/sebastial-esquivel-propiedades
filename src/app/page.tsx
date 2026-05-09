@@ -41,13 +41,18 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/hero.avif" alt="" className="w-full h-full object-cover object-top" height={1000}
-                  width={1600} />
-          <div className="absolute inset-0 bg-linear-to-br from-primary/40 to-secon60ary/50" />
+          <Image
+            src="/hero.avif"
+            alt="Equipo Sebastian Esquivel Propiedades"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+          <div className="absolute inset-0 bg-linear-to-br from-primary/40 to-secondary/50" />
         </div>
 
         <div className="relative mx-auto max-w-8xl px-6 pb-9 flex flex-col gap-16">
-          <Reveal className="p-8 md:p-12  backdrop-blur-md md:backdrop-blur-none rounded flex flex-col gap-4">
+          <Reveal className="p-8 md:p-12 backdrop-blur-md md:backdrop-blur-none rounded flex flex-col gap-4">
             <span className="text-xs tracking-[0.3em] uppercase text-black/60 font-medium">
               Especialistas en Zona Oeste y CABA
             </span>

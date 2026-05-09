@@ -6,18 +6,25 @@ export default function EquipoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-28 overflow-hidden">
+      <section className="relative min-h-150 md:min-h-0 md:py-24 overflow-hidden">
         <Image
           src="/sebastian-propiedades-equipo.avif"
           alt="Equipo Sebastian Esquivel Propiedades"
           fill
-          className="object-cover"
+          className="object-cover object-center hidden md:block"
+          priority
+        />
+        <Image
+          src="/hero.avif"
+          alt="Equipo Sebastian Esquivel Propiedades"
+          fill
+          className="object-cover object-top md:hidden"
           priority
         />
         <div className="absolute inset-0 bg-secondary-900/60" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(81,154,207,0.15),transparent_55%)]" />
-        <div className="relative mx-auto max-w-7xl px-6">
-          <Reveal>
+        <div className="relative mx-auto max-w-7xl px-3 py-24">
+          <Reveal className="px-3 py-4 backdrop-blur-md md:backdrop-blur-none rounded">
             <span className="text-xs tracking-[0.3em] uppercase text-primary-300 block mb-6">
               El equipo
             </span>
