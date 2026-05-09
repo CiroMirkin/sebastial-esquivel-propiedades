@@ -1,6 +1,23 @@
+import type { Metadata } from "next"
 import Link from "next/link";
 import { ImageCompare, PartnersBar, ProcessCTA, Reveal, Services, StaggeredGallery, WhatsAppCTA } from "@/components";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Inicio",
+  description:
+    "Publicá con el mejor estándar de calidad. Vendé con nuestro plan de comercialización premium y las últimas innovaciones tecnológicas. Especialistas en Zona Oeste y CABA.",
+  openGraph: {
+    title: "Esquivel Propiedades — Vendé tu propiedad al mejor precio, rápido y sin estrés",
+    description:
+      "Publicá con el mejor estándar de calidad. Vendé con nuestro plan de comercialización premium y las últimas innovaciones tecnológicas.",
+  },
+  twitter: {
+    title: "Esquivel Propiedades — Vendé tu propiedad al mejor precio, rápido y sin estrés",
+    description:
+      "Publicá con el mejor estándar de calidad. Vendé con nuestro plan de comercialización premium y las últimas innovaciones tecnológicas.",
+  },
+}
 
 const faqs = [
   {

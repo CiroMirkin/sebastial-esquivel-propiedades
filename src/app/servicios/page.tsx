@@ -1,6 +1,23 @@
+import type { Metadata } from "next"
 import { portals, Reveal, StaggeredGallery } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Servicios",
+  description:
+    "Usamos tecnología de vanguardia para vender tu propiedad en menos de 4 meses, al mejor precio y en el menor tiempo posible. Plan de Comercialización Premium.",
+  openGraph: {
+    title: "Servicios — Esquivel Propiedades",
+    description:
+      "Usamos tecnología de vanguardia para vender tu propiedad en menos de 4 meses, al mejor precio y en el menor tiempo posible.",
+  },
+  twitter: {
+    title: "Servicios — Esquivel Propiedades",
+    description:
+      "Usamos tecnología de vanguardia para vender tu propiedad en menos de 4 meses, al mejor precio y en el menor tiempo posible.",
+  },
+}
 
 const services = [
   {

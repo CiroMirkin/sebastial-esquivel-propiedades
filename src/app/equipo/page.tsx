@@ -1,6 +1,23 @@
+import type { Metadata } from "next"
 import { Reveal, StaggeredGallery, TeamGrid } from "@/components";
 import Image from "next/image";
 import { ScrollButton } from "./ScrollButton";
+
+export const metadata: Metadata = {
+  title: "Equipo",
+  description:
+    "En Sebastian Esquivel Propiedades estamos comprometidos en fomentar el desarrollo profesional de futuros inmobiliarios, brindándoles acceso a recursos de capacitación y oportunidades de formación continua.",
+  openGraph: {
+    title: "Equipo — Esquivel Propiedades",
+    description:
+      "Sumate a la nueva generación de inmobiliarios. Capacitación continua, acceso a información privilegiada del mercado y oficinas modernas.",
+  },
+  twitter: {
+    title: "Equipo — Esquivel Propiedades",
+    description:
+      "Sumate a la nueva generación de inmobiliarios. Capacitación continua, acceso a información privilegiada del mercado y oficinas modernas.",
+  },
+}
 
 export default function EquipoPage() {
   return (

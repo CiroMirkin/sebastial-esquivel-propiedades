@@ -16,8 +16,36 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Esquivel Propiedades",
+  title: {
+    template: "%s — Esquivel Propiedades",
+    default: "Esquivel Propiedades",
+  },
   description: "Especialistas en venta de propiedades en Zona Oeste y CABA.",
+  metadataBase: new URL("https://www.esquivelpropiedades.com.ar"),
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    siteName: "Sebastian Esquivel Propiedades",
+    title: "Esquivel Propiedades",
+    description: "Especialistas en venta de propiedades en Zona Oeste y CABA.",
+    images: [
+      {
+        url: "/team/sebastian-esquivel-CEO.avif",
+        width: 1200,
+        height: 630,
+        alt: "Sebastian Esquivel — CEO de Esquivel Propiedades",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Esquivel Propiedades",
+    description: "Especialistas en venta de propiedades en Zona Oeste y CABA.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
