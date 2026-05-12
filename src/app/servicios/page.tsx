@@ -3,6 +3,7 @@ import { portals, Reveal, StaggeredGallery } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import KuulaTour from "@/components/KuulaTour";
+import { ScrollButton } from "../equipo/ScrollButton";
 
 export const metadata: Metadata = {
   title: "Servicios",
@@ -87,8 +88,7 @@ export default function ServiciosPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-38 bg-primary-50 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(81,154,207,0.15),transparent_55%)]" />
+      <section className="relative min-h-150 md:min-h-0 md:py-24 overflow-hidden">
         <Image
           src="/servicios.avif"
           alt="Servicios de Sebastian Esquivel Propiedades"
@@ -96,24 +96,28 @@ export default function ServiciosPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="relative mx-auto max-w-7xl px-3">
-          <Reveal className="px-3 py-4 backdrop-blur-md inline-flex flex-col rounded">
-            <span className="text-xs tracking-[0.3em] uppercase text-white block mb-6">
+        <div className="absolute inset-0 bg-secondary-900/60" />
+        <div className="relative mx-auto max-w-7xl px-3 py-24">
+          <Reveal className="px-3 py-4 inline-flex flex-col">
+            <span className="text-xs tracking-[0.3em] uppercase text-primary-300 block mb-6">
               Lo que hacemos
             </span>
             <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl text-white mb-6">
               SERVICIOS
             </h1>
-            <p className="text-white text-lg max-w-xl leading-relaxed">
+            <p className="text-primary-100 text-lg max-w-xl leading-relaxed">
               Usamos tecnología de vanguardia para vender tu propiedad en menos de
               4 meses, al mejor precio y en el menor tiempo posible.
             </p>
+            <span>
+              <ScrollButton target="servicios-contenido" text="Ver servicios" />
+            </span>
           </Reveal>
         </div>
       </section>
 
       {/* Plan Premium */}
-      <section className="py-24 bg-white">
+      <section id="servicios-contenido" className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
             <Reveal>
@@ -180,7 +184,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* Tasación */}
-      <section className="py-24 bg-gradient-to-br from-primary-600 to-secondary-800">
+      <section className="py-24 bg-linear-to-br from-primary-600 to-secondary-800">
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-6">
             <Reveal>

@@ -54,7 +54,7 @@ export default function EquipoPage() {
               acceso a recursos de capacitación y oportunidades de formación
               continua.
             </p>
-            <ScrollButton />
+            <ScrollButton target="equipo-contenido" />
           </Reveal>
         </div>
       </section>
@@ -72,7 +72,7 @@ export default function EquipoPage() {
       </section>
 
       {/* Sumate */}
-      <section className="py-16 bg-gradient-to-br from-primary-600 to-secondary-800">
+      <section className="py-16 bg-linear-to-br from-primary-600 to-secondary-800">
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="flex flex-col gap-7">
             <StaggeredGallery

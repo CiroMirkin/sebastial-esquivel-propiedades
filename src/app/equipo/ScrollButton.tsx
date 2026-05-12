@@ -3,9 +3,15 @@
 import { motion } from "motion/react"
 import { scroller } from "react-scroll"
 
-export function ScrollButton() {
+interface ScrollButtonProps {
+  target: string
+  text?: string
+  className?: string
+}
+
+export function ScrollButton({ target, text = "Ver más", className = "" }: ScrollButtonProps) {
   const handleClick = () => {
-    scroller.scrollTo("equipo-contenido", {
+    scroller.scrollTo(target, {
       smooth: true,
       offset: -64,
       duration: 500,
@@ -19,9 +25,9 @@ export function ScrollButton() {
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       transition={{ duration: 0.2 }}
-      className="inline-flex items-center gap-3 mt-10 border border-white/40 text-white hover:bg-white/10 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold"
+      className={"inline-flex items-center gap-3 mt-10 border border-white/40 text-white hover:bg-white/10 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold " + className}
     >
-      Ver más
+      { text }
       <motion.svg
         width="14"
         height="14"
