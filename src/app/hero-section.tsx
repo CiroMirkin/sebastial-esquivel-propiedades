@@ -26,15 +26,15 @@ export function HeroSection() {
       </div>
 
       <motion.div style={{ paddingBottom }} className="relative mx-auto max-w-8xl px-6 flex flex-col gap-4">
-        <motion.div style={{ scale, opacity }} className="origin-center">
-          <Reveal className="p-6 md:p-12 backdrop-blur-md md:backdrop-blur-none rounded flex flex-col gap-3 md:gap-4">
+        <motion.div style={{ scale, opacity }} className="origin-center backdrop-blur-md md:backdrop-blur-none">
+          <Reveal className="p-6 md:p-12 flex flex-col gap-3 md:gap-4">
             <span className="text-xs tracking-[0.3em] uppercase text-black/60 font-medium">
               Especialistas en Zona Oeste y CABA
             </span>
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl xl:text-7xl leading-[1.05] text-black text-balance">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-black text-balance">
               Vendé tu propiedad al mejor precio, rápido y sin estrés.
             </h1>
-            <p className="text-black/80 text-base md:text-lg leading-relaxed max-w-xl pt-2 md:pt-4">
+            <p className="text-black/80 text-lg leading-relaxed max-w-xl pt-2 md:pt-4">
               Publicá con el mejor estándar de calidad. Vendé con nuestro plan
               de comercialización premium y las últimas innovaciones
               tecnológicas.
@@ -51,7 +51,7 @@ export function HeroSection() {
               </Link>
               <Link
                 href="/servicios"
-                className="inline-flex items-center gap-3 border border-black/30 text-black hover:border-black hover:bg-black/5 transition-colors px-8 py-4 text-xs tracking-widest uppercase"
+                className="inline-flex items-center gap-3 border border-black/30 bg-white/80 text-black hover:border-black hover:bg-black/5 transition-colors px-8 py-4 text-xs tracking-widest uppercase"
               >
                 Ver servicios
               </Link>
