@@ -1,7 +1,6 @@
 "use client"
 
 import { Reveal } from "./Reveal";
-import { motion, useAnimation } from "motion/react";
 
 const services = [
   {
@@ -59,52 +58,17 @@ export function Services() {
 }
 
 function ServiceCard({ service, index }: { service: (typeof services)[0]; index: number }) {
-  const controls = useAnimation();
-
   return (
-    <div
-      className="h-full"
-      style={{ perspective: "1000px" }}
-      onMouseEnter={() => controls.start({ rotateX: 180 })}
-      onMouseLeave={() => controls.start({ rotateX: 0 })}
-    >
-      <motion.div
-        className="relative h-full"
-        style={{ transformStyle: "preserve-3d" }}
-        animate={controls}
-        transition={{ duration: 0.45, ease: "easeInOut" }}
-      >
-        <div
-          className="h-full bg-white p-7 flex flex-col gap-3"
-          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
-        >
-          <span className="text-md text-primary-500/80 font-mono">
-            {String(index + 1).padStart(2, "0")}
-          </span>
-          <h3 className="font-serif text-2xl text-secondary-800">
-            {service.title}
-          </h3>
-          <p className="text-secondary-500 text-lg leading-relaxed invisible">
-            {service.description}
-          </p>
-        </div>
-
-        <div
-          className="absolute inset-0 bg-primary-600 p-7 flex flex-col justify-center gap-4"
-          style={{
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-            transform: "rotateX(180deg)",
-          }}
-        >
-          <h3 className="font-serif text-2xl text-white">
-            {service.title}
-          </h3>
-          <p className="text-white/80 text-lg leading-relaxed">
-            {service.description}
-          </p>
-        </div>
-      </motion.div>
+    <div className="h-full bg-white p-7 flex flex-col gap-3">
+      <span className="text-md text-primary-500/80 font-mono">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <h3 className="font-serif text-2xl text-secondary-800">
+        {service.title}
+      </h3>
+      <p className="text-secondary-500 text-lg leading-relaxed">
+        {service.description}
+      </p>
     </div>
   );
 }
