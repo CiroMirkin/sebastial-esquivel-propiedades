@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link";
 import { ImageCompare, PartnersBar, ProcessCTA, Reveal, Services, StaggeredGallery, WhatsAppCTA } from "@/components";
 import Image from "next/image";
+import { HeroSection } from "./hero-section";
 
 export const metadata: Metadata = {
   title: "Inicio",
@@ -55,54 +56,7 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/hero.avif"
-            alt="Equipo Sebastian Esquivel Propiedades"
-            fill
-            className="object-cover object-top"
-            priority
-          />
-          <div className="absolute inset-0 bg-linear-to-br from-primary/40 to-secondary/50" />
-        </div>
-
-        <div className="relative mx-auto max-w-8xl px-6 pb-9 flex flex-col gap-16">
-          <Reveal className="p-8 md:p-12 backdrop-blur-md md:backdrop-blur-none rounded flex flex-col gap-4">
-            <span className="text-xs tracking-[0.3em] uppercase text-black/60 font-medium">
-              Especialistas en Zona Oeste y CABA
-            </span>
-            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-black text-balance">
-              Vendé tu propiedad al mejor precio, rápido y sin estrés.
-            </h1>
-            <p className="text-black/80 text-lg leading-relaxed max-w-xl pt-4">
-              Publicá con el mejor estándar de calidad. Vendé con nuestro plan
-              de comercialización premium y las últimas innovaciones
-              tecnológicas.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-2">
-              <Link
-                href="/contacto"
-                className="inline-flex items-center gap-3 bg-black text-white hover:bg-black/90 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold"
-              >
-                Quiero vender
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </Link>
-              <Link
-                href="/servicios"
-                className="inline-flex items-center gap-3 border border-black/30 text-black hover:border-black hover:bg-black/5 transition-colors px-8 py-4 text-xs tracking-widest uppercase"
-              >
-                Ver servicios
-              </Link>
-            </div>
-          </Reveal>
-          {/** Componente que genera espacio en blanco */}
-          <div className="w-2 h-8"></div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Servicios */}
       <section className="py-28 bg-primary-50">
@@ -139,15 +93,14 @@ export default function HomePage() {
           <Services />
 
           {/* Amoblamiento Virtual - Comparativa */}
-          
-            <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border border-primary-200 bg-white p-8 md:p-10 rounded-lg">
-              <div className="flex flex-col gap-5">
-                <Reveal>
-                  <h2 className="font-serif text-4xl md:text-5xl text-secondary-800">
-                    Amoblamiento virtual incluido
-                  </h2>
-                </Reveal>
-                <Reveal>
+          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border border-primary-200 bg-white p-8 md:p-10 rounded-lg">
+            <div className="flex flex-col gap-5">
+              <Reveal>
+                <h2 className="font-serif text-4xl md:text-5xl text-secondary-800">
+                  Amoblamiento virtual incluido
+                </h2>
+              </Reveal>
+              <Reveal>
                 <p className="mb-4 text-xs tracking-[0.3em] uppercase text-primary-600 font-medium">
                   Hacemos que tu propiedad se vuelva irresistible.
                 </p>
@@ -155,22 +108,22 @@ export default function HomePage() {
                   Realizamos un amoblamiento virtual sobre ambientes vacíos para
                   generar un mejor y mayor impacto.
                 </p>
-                </Reveal>
-                <Reveal>
-                  <div className="mt-8 flex justify-start">
-                    <Link
-                      href="/servicios"
-                      className="inline-flex items-center gap-3 border border-primary-400 text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all px-7 py-3 text-xs tracking-widest uppercase"
-                    >
-                      Ver más
-                    </Link>
-                  </div>
-                </Reveal>
-              </div>
-              <div className="w-full">
-                <ImageCompare />
-              </div>
+              </Reveal>
+              <Reveal>
+                <div className="mt-8 flex justify-start">
+                  <Link
+                    href="/servicios"
+                    className="inline-flex items-center gap-3 border border-primary-400 text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all px-7 py-3 text-xs tracking-widest uppercase"
+                  >
+                    Ver más
+                  </Link>
+                </div>
+              </Reveal>
             </div>
+            <div className="w-full">
+              <ImageCompare />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -178,7 +131,7 @@ export default function HomePage() {
       <section className="pt-10 pb-8 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
           <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
-             <Reveal className="md:w-1/2 order-2 md:order-0 lg:block hidden">
+            <Reveal className="md:w-1/2 order-2 md:order-0 lg:block hidden">
               <div className="relative">
                 <Image
                   className="w-full h-auto object-cover rounded shadow-xl"
@@ -296,8 +249,9 @@ export default function HomePage() {
 
       {/* Proceso */}
       <ProcessCTA />
-
-      <PartnersBar />
+      <section className="bg-white w-full">
+        <PartnersBar />
+      </section>
 
       {/* FAQ */}
       <section className="py-28 pt-18 bg-secondary-50">

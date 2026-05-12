@@ -10,7 +10,7 @@ export const portals = [
 
 export function PartnersBar() {
   return (
-    <div className="mx-auto max-w-7xl border-t grid grid-cols-1 lg:grid-cols-[1fr_3fr] justify-between">
+    <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-[1fr_1fr] justify-between">
       <Reveal className="px-6 py-10 flex flex-col gap-4">
         <span className="text-xs tracking-[0.3em] uppercase text-black/50 font-medium">
           Adheridos a la red

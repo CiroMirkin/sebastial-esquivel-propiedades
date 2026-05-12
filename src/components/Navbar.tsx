@@ -103,7 +103,7 @@ export function Navbar() {
             aria-expanded={isOpen}
           >
             <motion.div
-              className="flex flex-col gap-[5px] w-[22px]"
+              className="flex flex-col gap-1.25 w-5.5"
               animate={isOpen ? "open" : "closed"}
             >
               <motion.span
