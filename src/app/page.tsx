@@ -59,7 +59,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* Servicios */}
-      <section className="py-28 bg-primary-50">
+      <section className="pt-28 pb-20 bg-primary-50">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
@@ -91,39 +91,37 @@ export default function HomePage() {
           </div>
 
           <Services />
+        </div>
+      </section>
 
-          {/* Amoblamiento Virtual - Comparativa */}
-          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border border-primary-200 bg-white p-8 md:p-10 rounded-lg">
-            <div className="flex flex-col gap-5">
-              <Reveal>
-                <h2 className="font-serif text-4xl md:text-5xl text-secondary-800">
-                  Amoblamiento virtual incluido
-                </h2>
-              </Reveal>
-              <Reveal>
-                <p className="mb-4 text-xs tracking-[0.3em] uppercase text-primary-600 font-medium">
-                  Hacemos que tu propiedad se vuelva irresistible.
-                </p>
-                <p className="text-secondary-700 leading-relaxed">
-                  Realizamos un amoblamiento virtual sobre ambientes vacíos para
-                  generar un mejor y mayor impacto.
-                </p>
-              </Reveal>
-              <Reveal>
-                <div className="mt-8 flex justify-start">
-                  <Link
-                    href="/servicios"
-                    className="inline-flex items-center gap-3 border border-primary-400 text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all px-7 py-3 text-xs tracking-widest uppercase"
-                  >
-                    Ver más
-                  </Link>
-                </div>
-              </Reveal>
+      {/* Amoblamiento Virtual - Comparativa */}
+      <section className="bg-primary-50 border-b border-primary-200 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pb-10 md:pt-10 px-8 md:px-10">
+          <div className="flex flex-col gap-5">
+            <Reveal>
+              <p className="mb-4 text-xs tracking-[0.3em] uppercase text-primary-600 font-medium">
+                Hacemos que tu propiedad se vuelva irresistible.
+              </p>
+              <h2 className="mb-4 font-serif text-4xl md:text-5xl text-secondary-800">
+                Amoblamiento virtual incluido
+              </h2>
+              <p className="text-secondary-700 leading-relaxed">
+                Realizamos un amoblamiento virtual sobre ambientes vacíos para
+                generar un mejor y mayor impacto.
+              </p>
+              <div className="mt-8 flex justify-start">
+                <Link
+                  href="/servicios"
+                  className="inline-flex items-center gap-3 border border-primary-400 text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all px-7 py-3 text-xs tracking-widest uppercase"
+                >
+                  Ver más
+                </Link>
+              </div>
+            </Reveal>
             </div>
-            <div className="w-full">
+            <Reveal className="w-full">
               <ImageCompare />
-            </div>
-          </div>
+            </Reveal>
         </div>
       </section>
 

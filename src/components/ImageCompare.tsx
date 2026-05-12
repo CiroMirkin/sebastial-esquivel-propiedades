@@ -114,7 +114,7 @@ export function ImageCompare() {
     <div className="flex flex-col gap-4">
       <div
         ref={containerRef}
-        className="relative w-full aspect-4/3 select-none overflow-hidden rounded-lg border border-primary-200"
+        className="relative w-full aspect-4/3 select-none overflow-hidden border border-primary-200"
         style={{ cursor: isDragging ? "grabbing" : "ew-resize", touchAction: "none" }}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
@@ -158,7 +158,7 @@ export function ImageCompare() {
           className="absolute top-0 bottom-0 w-px bg-white z-10"
           style={{ left: `${sliderPos}%` }}
         >
-          <div className="absolute inset-y-0 -left-[3px] -right-[3px] bg-white/20 backdrop-blur-[1px]" />
+          <div className="absolute inset-y-0 -left-0.75 -right-0.75 bg-white/20 backdrop-blur-[1px]" />
         </div>
 
         <div
