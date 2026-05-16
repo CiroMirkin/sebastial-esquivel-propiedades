@@ -1,12 +1,10 @@
 "use client"
 
-import { useScroll, useTransform, motion } from "motion/react"
 import { useEffect, useState } from "react"
 import { Grainient } from "@/components/Grainient"
 import { Reveal } from "@/components/Reveal"
 
 export function Hero() {
-  const { scrollY } = useScroll()
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -16,18 +14,6 @@ export function Hero() {
     return () => window.removeEventListener("resize", check)
   }, [])
 
-  const videoScale = useTransform(
-    scrollY,
-    [0, 400],
-    isMobile ? [1, 0.82] : [1, 1],
-  )
-  const videoOpacity = useTransform(scrollY, [0, 350], isMobile ? [1, 0] : [1, 1])
-
-  const videoContainerHeight = useTransform(
-  scrollY,
-  [200, 380],
-  isMobile ? ["375px", "0px"] : ["", ""],
-)
   return (
     <main
       className="min-h-screen bg-(--cream) text-white"
@@ -63,7 +49,6 @@ export function Hero() {
                     Zona Oeste · CABA
                   </div>
                 </Reveal>
-
 
                 <Reveal delay={0.1}>
                   <h1
@@ -119,15 +104,7 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Video — anima independientemente del texto */}
-            <motion.div
-              style={{
-                scale: videoScale,
-                opacity: videoOpacity,
-                height: videoContainerHeight,
-              }}
-              className="overflow-hidden origin-top will-change-transform md:col-span-7"
-            >
+            <div className="overflow-hidden md:col-span-7">
               <Reveal delay={0.15}>
                 <div className="relative">
                   <div className="relative aspect-378/275 overflow-hidden rounded-xs bg-white/5 shadow-[0_40px_80px_-30px_oklch(0.18_0.015_60/0.4)]">
@@ -157,46 +134,45 @@ export function Hero() {
                   </div>
                 </div>
               </Reveal>
-            </motion.div>
+            </div>
 
           </div>
         </div>
       </section>
 
-      {/* Stats — flujo normal, empuja el hero hacia arriba */}
       <div className="relative z-10 border-y border-white/10 bg-(--cream)">
-  <div className="mx-auto grid max-w-350 grid-cols-2 divide-x divide-white/10 md:grid-cols-4">
-    {[
-      { value: "−4", suffix: "meses", label: "Tiempo promedio de venta" },
-      { value: "+40", suffix: "red", label: "Inmobiliarias asociadas" },
-      { value: "360°", suffix: "tour", label: "Recorrido virtual incluido" },
-      { value: "3", suffix: "portales", label: "Publicación destacada" },
-    ].map((s, i) => {
-      const content = (
-        <div className="px-6 py-8 md:px-10 md:py-10">
-          <div className="flex items-baseline gap-2">
-            <div
-              className="text-4xl tracking-tight text-white md:text-5xl"
-              style={{ fontFamily: "var(--font-display)", fontWeight: 400 }}
-            >
-              {s.value}
-            </div>
-            <div className="text-xs tracking-[0.2em] uppercase text-white">
-              {s.suffix}
-            </div>
-          </div>
-          <div className="mt-2 text-sm text-white">{s.label}</div>
-        </div>
-      )
+        <div className="mx-auto grid max-w-350 grid-cols-2 divide-x divide-white/10 md:grid-cols-4">
+          {[
+            { value: "−4", suffix: "meses", label: "Tiempo promedio de venta" },
+            { value: "+40", suffix: "red", label: "Inmobiliarias asociadas" },
+            { value: "360°", suffix: "tour", label: "Recorrido virtual incluido" },
+            { value: "3", suffix: "portales", label: "Publicación destacada" },
+          ].map((s, i) => {
+            const content = (
+              <div className="px-6 py-8 md:px-10 md:py-10">
+                <div className="flex items-baseline gap-2">
+                  <div
+                    className="text-4xl tracking-tight text-white md:text-5xl"
+                    style={{ fontFamily: "var(--font-display)", fontWeight: 400 }}
+                  >
+                    {s.value}
+                  </div>
+                  <div className="text-xs tracking-[0.2em] uppercase text-white">
+                    {s.suffix}
+                  </div>
+                </div>
+                <div className="mt-2 text-sm text-white">{s.label}</div>
+              </div>
+            )
 
-      return isMobile ? (
-        <Reveal key={s.label} delay={i * 0.1}>{content}</Reveal>
-      ) : (
-        <div key={s.label}>{content}</div>
-      )
-    })}
-  </div>
-</div>
+            return isMobile ? (
+              <Reveal key={s.label} delay={i * 0.1}>{content}</Reveal>
+            ) : (
+              <div key={s.label}>{content}</div>
+            )
+          })}
+        </div>
+      </div>
     </main>
   )
 }
