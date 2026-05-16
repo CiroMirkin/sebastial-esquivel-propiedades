@@ -20,18 +20,13 @@ export default function Hero() {
     [0, 400],
     isMobile ? [1, 0.82] : [1, 1],
   )
-  const videoOpacity = useTransform(
-    scrollY,
-    [0, 500],
-    isMobile ? [1, 0] : [1, 1],
-  )
+  const videoOpacity = useTransform(scrollY, [0, 350], isMobile ? [1, 0] : [1, 1])
 
   const videoContainerHeight = useTransform(
-    scrollY,
-    [300, 500],
-    isMobile ? ["375px", "0px"] : ["", ""],
-  )
-
+  scrollY,
+  [200, 380],
+  isMobile ? ["375px", "0px"] : ["", ""],
+)
   return (
     <main
       className="min-h-screen bg-(--cream) text-white"
@@ -56,7 +51,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/10 to-black/50" />
       </div>
 
-      <section className="relative" style={{ minHeight: isMobile ? "180vh" : "100vh" }}>
+      <section className="relative" style={{ minHeight: isMobile ? "110vh" : "100vh" }}>
         <div className="sticky top-14 flex items-center overflow-hidden">
           <div className="relative mx-auto w-full max-w-350 px-6 pt-10 pb-14 md:px-12 md:pt-16 lg:grid lg:grid-cols-12 lg:items-center lg:gap-12">
 
