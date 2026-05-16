@@ -1,4 +1,4 @@
-import { Grainient } from "@/components";
+import { Grainient, Reveal } from "@/components";
 
 export default function Hero() {
   return (
@@ -31,40 +31,47 @@ export default function Hero() {
 
         <div className="relative mx-auto grid max-w-350 grid-cols-1 gap-10 px-6 pt-8 pb-14 md:px-12 md:pt-16 lg:grid-cols-12 lg:gap-12">
           <div className="relative z-10 lg:col-span-5">
-            <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/50 px-4 py-1.5 text-xs tracking-[0.25em] uppercase backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary-600 text-black" />
-              Zona Oeste · CABA
-            </div>
+            <Reveal>
+              <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/50 px-4 py-1.5 text-xs tracking-[0.25em] uppercase backdrop-blur">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary-600 text-black" />
+                Zona Oeste · CABA
+              </div>
+            </Reveal>
 
-            <h1
-              className="font-serif text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] tracking-[-0.03em] text-white"
-              style={{ fontWeight: 400 }}
-            >
-              Vendé tu
-              <br />
-              propiedad{" "}
-              <em
-                className="font-serif not-italic text-secondary-900"
-                style={{ fontStyle: "italic", fontWeight: 300 }}
+            <Reveal delay={0.1}>
+              <h1
+                className="font-serif text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] tracking-[-0.03em] text-white"
+                style={{ fontWeight: 400 }}
               >
-                al mejor
-              </em>
-              <br />
-              <em
-                className="font-serif text-secondary-900"
-                style={{ fontStyle: "italic", fontWeight: 300 }}
-              >
-                precio.
-              </em>
-            </h1>
+                Vendé tu
+                <br />
+                propiedad{" "}
+                <em
+                  className="font-serif not-italic text-secondary-900"
+                  style={{ fontStyle: "italic", fontWeight: 300 }}
+                >
+                  al mejor
+                </em>
+                <br />
+                <em
+                  className="font-serif text-secondary-900"
+                  style={{ fontStyle: "italic", fontWeight: 300 }}
+                >
+                  precio.
+                </em>
+              </h1>
+            </Reveal>
 
-            <p className="mt-8 max-w-xl text-base leading-relaxed md:text-lg">
-              Publicá con el mejor estándar de calidad del mercado. Plan de
-              comercialización premium, fotografía profesional, video con drone
-              y recorridos 360°. Rápido, sin estrés.
-            </p>
+            <Reveal delay={0.2}>
+              <p className="mt-8 max-w-xl text-base leading-relaxed md:text-lg">
+                Publicá con el mejor estándar de calidad del mercado. Plan de
+                comercialización premium, fotografía profesional, video con drone
+                y recorridos 360°. Rápido, sin estrés.
+              </p>
+            </Reveal>
 
-            <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <Reveal delay={0.3}>
+              <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <a
                 href="#contacto"
                 className="group inline-flex items-center gap-3 rounded-full bg-primary-200 px-7 py-4 text-sm font-medium text-black shadow-primary-200 transition-all hover:-translate-y-0.1 hover:shadow-[0_30px_60px_-15px_oklch(0.55_0.16_38/0.6)]"
@@ -79,9 +86,11 @@ export default function Hero() {
                 Ver nuestros servicios
               </a>
             </div>
+            </Reveal>
           </div>
 
           <div className="relative lg:col-span-7">
+            <Reveal delay={0.15}>
             <div className="relative">
               <div className="relative aspect-378/275 overflow-hidden rounded-xs bg-white/5 shadow-[0_40px_80px_-30px_oklch(0.18_0.015_60/0.4)]">
                 <video
@@ -109,6 +118,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+            </Reveal>
           </div>
         </div>
 
@@ -119,23 +129,25 @@ export default function Hero() {
               { value: "+40", suffix: "red", label: "Inmobiliarias asociadas" },
               { value: "360°", suffix: "tour", label: "Recorrido virtual incluido" },
               { value: "3", suffix: "portales", label: "Publicación destacada" },
-            ].map((s) => (
-              <div key={s.label} className="px-6 py-8 md:px-10 md:py-10">
-                <div className="flex items-baseline gap-2">
-                  <div
-                    className="text-4xl tracking-tight text-white md:text-5xl"
-                    style={{ fontFamily: "var(--font-display)", fontWeight: 400 }}
-                  >
-                    {s.value}
+            ].map((s, i) => (
+              <Reveal key={s.label} delay={i * 0.1}>
+                <div className="px-6 py-8 md:px-10 md:py-10">
+                  <div className="flex items-baseline gap-2">
+                    <div
+                      className="text-4xl tracking-tight text-white md:text-5xl"
+                      style={{ fontFamily: "var(--font-display)", fontWeight: 400 }}
+                    >
+                      {s.value}
+                    </div>
+                    <div className="text-xs tracking-[0.2em] uppercase text-white">
+                      {s.suffix}
+                    </div>
                   </div>
-                  <div className="text-xs tracking-[0.2em] uppercase text-white">
-                    {s.suffix}
+                  <div className="mt-2 text-sm text-white">
+                    {s.label}
                   </div>
                 </div>
-                <div className="mt-2 text-sm text-white">
-                  {s.label}
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
