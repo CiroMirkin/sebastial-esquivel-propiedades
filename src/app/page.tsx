@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ImageCompare, Reveal } from "@/components";
+import { ImageCompare, Reveal, Hero } from "@/components";
 import Image from "next/image";
 
 const services = [
@@ -81,65 +81,7 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="/hero.avif" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-linear-to-br from-primary/40 to-secondary/50" />
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-6 py-16 grid grid-cols-1 lg:grid-cols-[65%_1fr] gap-16 items-center">
-          <Reveal className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 md:p-12 flex flex-col gap-8">
-            <span className="text-xs tracking-[0.3em] uppercase text-black/60 font-medium">
-              Especialistas en Zona Oeste y CABA
-            </span>
-            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-black text-balance">
-              Vendé tu propiedad al mejor precio, rápido y sin estrés.
-            </h1>
-            <p className="text-black/80 text-lg leading-relaxed max-w-md">
-              Publicá con el mejor estándar de calidad. Vendé con nuestro plan
-              de comercialización premium y las últimas innovaciones
-              tecnológicas.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-2">
-              <Link
-                href="/contacto"
-                className="inline-flex items-center gap-3 bg-black text-white hover:bg-black/90 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold"
-              >
-                Quiero vender
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </Link>
-              <Link
-                href="/servicios"
-                className="inline-flex items-center gap-3 border border-black/30 text-black hover:border-black hover:bg-black/5 transition-colors px-8 py-4 text-xs tracking-widest uppercase"
-              >
-                Ver servicios
-              </Link>
-            </div>
-          </Reveal>
-
-          <div className="flex lg:flex-col justify-center flex-wrap gap-3">
-            {[
-              { value: "-4 meses", label: "Tiempo promedio de venta" },
-              { value: "+40", label: "Inmobiliarias en red" },
-              { value: "360°", label: "Recorrido virtual incluido" },
-              { value: "3 portales", label: "Publicación destacada" },
-            ].map((stat, i) => (
-              <Reveal key={stat.label} delay={i * 0.1} className="border border-black/20 bg-white/20 backdrop-blur-sm p-6 flex flex-col gap-2 rounded">
-                <span className="font-serif text-3xl text-black">
-                  {stat.value}
-                </span>
-                <span className="text-xs text-black/70 leading-snug">
-                  {stat.label}
-                </span>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <Hero />
       {/* Servicios */}
       <section className="py-28 bg-primary-50">
         <div className="mx-auto max-w-7xl px-6">
