@@ -1,49 +1,24 @@
+import type { Metadata } from "next"
 import Link from "next/link";
-import { ImageCompare, Reveal, Hero } from "@/components";
+import { ImageCompare, PartnersBar, ProcessCTA, Reveal, Services, StaggeredGallery, WhatsAppCTA, Hero } from "@/components";
 import Image from "next/image";
+import { HeroSection } from "./hero-section";
 
-const services = [
-  {
-    title: "Foto Profesional",
+export const metadata: Metadata = {
+  title: "Inicio",
+  description:
+    "Publicá con el mejor estándar de calidad. Vendé con nuestro plan de comercialización premium y las últimas innovaciones tecnológicas. Especialistas en Zona Oeste y CABA.",
+  openGraph: {
+    title: "Esquivel Propiedades — Vendé tu propiedad al mejor precio, rápido y sin estrés",
     description:
-      "Tomadas por un estudio especializado para que tu propiedad se luzca al máximo.",
+      "Publicá con el mejor estándar de calidad. Vendé con nuestro plan de comercialización premium y las últimas innovaciones tecnológicas.",
   },
-  {
-    title: "Super Destacado",
+  twitter: {
+    title: "Esquivel Propiedades — Vendé tu propiedad al mejor precio, rápido y sin estrés",
     description:
-      "Máxima exposición en los portales más destacados del mercado inmobiliario.",
+      "Publicá con el mejor estándar de calidad. Vendé con nuestro plan de comercialización premium y las últimas innovaciones tecnológicas.",
   },
-  {
-    title: "Video Profesional",
-    description:
-      "Escenas realizadas con estabilizador en movimiento y tomas panorámicas de los ambientes.",
-  },
-  {
-    title: "Tomas con Drone",
-    description:
-      "Para casas, terrenos o grandes inmuebles según zonas autorizadas.",
-  },
-  {
-    title: "Recorrido 360°",
-    description:
-      "Un recorrido exhaustivo en primera persona para pre-visitar y apreciar todos sus atributos.",
-  },
-  {
-    title: "Trabajo en Red",
-    description:
-      "Trabajamos dentro de un ecosistema colaborativo de más de 40 inmobiliarias.",
-  },
-  {
-    title: "Plano Profesional",
-    description:
-      "Planta redibujada por arquitectos para comprender mejor la distribución.",
-  },
-  {
-    title: "Seguimiento Semanal",
-    description:
-      "El propietario recibe semanalmente el informe con el embudo de ventas y probabilidad de venta.",
-  },
-];
+}
 
 const faqs = [
   {
@@ -74,7 +49,7 @@ const faqs = [
   {
     question: "¿Cómo funciona el esquema de referidos?",
     answer:
-      "El referidor identifica personas en su círculo que quieran vender, recomienda nuestro servicio y si la venta se concreta, recibe una comisión previamente establecida. Es una forma de ganar dinero simplemente estando atento.",
+      "El referidor identifica personas en su círculo que quieran vender, recomienda nuestro servicio y si la venta se concreta, recibe una comisión previamente establecida.",
   },
 ];
 
@@ -83,7 +58,7 @@ export default function HomePage() {
     <>
       <Hero />
       {/* Servicios */}
-      <section className="pt-10 pb-28 bg-primary-50">
+      <section className="pt-28 pb-20 bg-primary-50">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
@@ -94,70 +69,47 @@ export default function HomePage() {
                 Nuestro Estándar de Calidad
               </h2>
             </div>
-            <p className="text-secondary-600 max-w-lg text-base leading-relaxed">
-              Te contamos cómo vendemos en menos de 4 meses
-            </p>
           </Reveal>
+          <Services />
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-200">
-            {services.map((service, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <div className="h-full bg-white p-7 flex flex-col gap-3 hover:bg-primary-50 transition-colors group">
-                  <span className="text-md text-primary-500/80 font-mono">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="font-serif text-2xl text-secondary-800 group-hover:text-primary-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-secondary-500 text-lg leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          {/* Amoblamiento Virtual - Comparativa */}
-          
-            <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border border-primary-200 bg-white p-8 md:p-10 rounded-lg">
-              <div className="flex flex-col gap-5">
-                <Reveal>
-                  <h2 className="font-serif text-4xl md:text-5xl text-secondary-800">
-                    Amoblamiento virtual incluido
-                  </h2>
-                </Reveal>
-                <Reveal>
-                <p className="mb-4 text-xs tracking-[0.3em] uppercase text-primary-600 font-medium">
-                  Hacemos que tu propiedad se vuelva irresistible.
-                </p>
-                <p className="text-secondary-700 leading-relaxed">
-                  Realizamos un amoblamiento virtual sobre ambientes vacíos para
-                  generar un mejor y mayor impacto.
-                </p>
-                </Reveal>
-                <Reveal>
-                  <div className="mt-8 flex justify-start">
-                    <Link
-                      href="/servicios"
-                      className="inline-flex items-center gap-3 border border-primary-400 text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all px-7 py-3 text-xs tracking-widest uppercase"
-                    >
-                      Ver más
-                    </Link>
-                  </div>
-                </Reveal>
+      {/* Amoblamiento Virtual - Comparativa */}
+      <section className="bg-primary-50 border-b border-primary-200 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pb-10 md:pt-10 px-8 md:px-10">
+          <div className="flex flex-col gap-5">
+            <Reveal>
+              <p className="mb-4 text-xs tracking-[0.3em] uppercase text-primary-600 font-medium">
+                Hacemos que tu propiedad se vuelva irresistible.
+              </p>
+              <h2 className="mb-4 font-serif text-4xl md:text-5xl text-secondary-800">
+                Amoblamiento virtual incluido
+              </h2>
+              <p className="text-secondary-700 leading-relaxed">
+                Realizamos un amoblamiento virtual sobre ambientes vacíos para
+                generar un mejor y mayor impacto.
+              </p>
+              <div className="mt-8 flex justify-start">
+                <Link
+                  href="/servicios"
+                  className="inline-flex items-center gap-3 border border-primary-400 text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all px-7 py-3 text-xs tracking-widest uppercase"
+                >
+                  Ver más
+                </Link>
               </div>
-              <div className="w-full">
-                <ImageCompare />
-              </div>
+            </Reveal>
             </div>
+            <Reveal className="w-full">
+              <ImageCompare />
+            </Reveal>
         </div>
       </section>
 
       {/* Sobre Sebastian */}
-      <section className="pt-28 pb-8 bg-white">
+      <section className="pt-10 pb-8 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
           <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
-             <Reveal className="md:w-1/2 order-2 md:order-0 lg:block hidden">
+            <Reveal className="md:w-1/2 order-2 md:order-0 lg:block hidden">
               <div className="relative">
                 <Image
                   className="w-full h-auto object-cover rounded shadow-xl"
@@ -262,79 +214,25 @@ export default function HomePage() {
             </div>
           </Reveal>
           
-          <Reveal>
-            {/* Grilla de imágenes */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <Image
-                  src="/office-1.avif"
-                  alt="Oficina en Palermo Hollywood - Vista principal"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto object-cover rounded-lg shadow-md"
-                />
-                <Image
-                  src="/office-3.avif"
-                  alt="Oficina en Palermo Hollywood - Sala de reuniones"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto object-cover rounded-lg shadow-md"
-                />
-              </div>
-              <div className="space-y-4 pt-8">
-                <Image
-                  src="/office-2.avif"
-                  alt="Oficina en Palermo Hollywood - Espacio de trabajo"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto object-cover rounded-lg shadow-md"
-                />
-                <Image
-                  src="/office-4.avif"
-                  alt="Oficina en Palermo Hollywood - Recepción"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto object-cover rounded-lg shadow-md"
-                />
-              </div>
-            </div>
-          </Reveal>
+          <StaggeredGallery
+            images={[
+              { src: "/office-1.avif", alt: "Oficina en Palermo Hollywood - Vista principal" },
+              { src: "/office-3.avif", alt: "Oficina en Palermo Hollywood - Sala de reuniones" },
+              { src: "/office-2.avif", alt: "Oficina en Palermo Hollywood - Espacio de trabajo" },
+              { src: "/office-4.avif", alt: "Oficina en Palermo Hollywood - Recepción" },
+            ]}
+          />
         </div>
       </section>
 
       {/* Proceso */}
-      <section className="py-28 bg-gradient-to-br from-primary-600 to-secondary-800">
-        <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <Reveal className="flex flex-col gap-6">
-            <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight">
-              Simplificamos al extremo el proceso de venta de tu hogar.
-            </h2>
-            <p className="text-primary-100 leading-relaxed">
-              TE ACOMPAÑAMOS EN TODO EL PROCESO
-            </p>
-          </Reveal>
-          <Reveal delay={0.15} className="flex flex-col gap-5">
-            <p className="text-white/90 leading-relaxed">
-              Nos encargamos de publicar la propiedad, realizar una estrategia
-              de acciones proactivas para concretar la venta, gestionar las
-              consultas, precalificar clientes, organizar las visitas, negociar
-              el precio de venta y de todo el papeleo y los contratos.
-            </p>
-            <Link
-              href="/contacto"
-              className="inline-flex items-center gap-3 bg-white text-primary-700 hover:bg-primary-50 transition-colors px-8 py-4 text-xs tracking-widest uppercase font-semibold self-start"
-            >
-              Quiero vender
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
-          </Reveal>
-        </div>
+      <ProcessCTA />
+      <section className="bg-white w-full">
+        <PartnersBar />
       </section>
 
       {/* FAQ */}
-      <section className="py-28 bg-secondary-50">
+      <section className="py-28 pt-18 bg-secondary-50">
         <div className="mx-auto max-w-7xl px-6">
           <Reveal className="mb-14">
             <span className="text-xs tracking-[0.3em] uppercase text-primary-600 block mb-4">
@@ -352,7 +250,7 @@ export default function HomePage() {
                   <h3 className="font-serif text-2xl text-primary-600 mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-secondary-600 text-lg leading-relaxed">
+                  <p className="text-secondary-600 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -368,12 +266,7 @@ export default function HomePage() {
           <h2 className="font-serif text-4xl md:text-5xl text-white max-w-xl">
             ¿Listo para vender tu propiedad?
           </h2>
-          <a
-            href="https://api.whatsapp.com/send/?phone=5491137775276&text=Hola%20Sebasti%C3%A1n%2C%20me%20interesa%20vender%20mi%20propiedad.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F&type=phone_number&app_absent=0"
-            className="inline-flex items-center gap-3 bg-primary-500 text-white hover:bg-primary-600 transition-colors px-10 py-4 text-xs tracking-widest uppercase font-semibold"
-          >
-            Escribinos por WhatsApp
-          </a>
+          <WhatsAppCTA />
         </Reveal>
       </section>
     </>

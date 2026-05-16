@@ -103,7 +103,7 @@ export function Navbar() {
             aria-expanded={isOpen}
           >
             <motion.div
-              className="flex flex-col gap-[5px] w-[22px]"
+              className="flex flex-col gap-1.25 w-5.5"
               animate={isOpen ? "open" : "closed"}
             >
               <motion.span
@@ -166,6 +166,7 @@ export function Navbar() {
                     {link.external ? (
                       <a
                         href={link.href}
+                        onClick={() => setIsOpen(false)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block py-3 text-xs tracking-widest uppercase text-white font-medium hover:text-white/70 transition-colors border-b border-white/10 last:border-0"
@@ -175,6 +176,7 @@ export function Navbar() {
                     ) : (
                       <Link
                         href={link.href}
+                        onClick={() => setIsOpen(false)}
                         className={`block py-3 text-xs tracking-widest uppercase font-medium transition-colors border-b border-white/10 last:border-0 ${
                           pathname === link.href ? "text-white/60" : "text-white hover:text-white/70"
                         }`}

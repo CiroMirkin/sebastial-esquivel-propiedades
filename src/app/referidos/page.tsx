@@ -1,3 +1,21 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Programa de Referidos",
+  description:
+    "Recibí el 1% de la comisión inmobiliaria si la venta se concreta. Recomendá nuestro servicio y ganá dinero por estar atento. Alcance: Provincia de Buenos Aires y CABA.",
+  openGraph: {
+    title: "Programa de Referidos — Esquivel Propiedades",
+    description:
+      "Recibí el 1% de la comisión inmobiliaria si la venta se concreta. Recomendá nuestro servicio y ganá dinero por estar atento.",
+  },
+  twitter: {
+    title: "Programa de Referidos — Esquivel Propiedades",
+    description:
+      "Recibí el 1% de la comisión inmobiliaria si la venta se concreta. Recomendá nuestro servicio y ganá dinero por estar atento.",
+  },
+}
+
 const faqs = [
   {
     question: "¿Y cuánto dinero representa?",

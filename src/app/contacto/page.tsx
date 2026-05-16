@@ -1,3 +1,21 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contacto",
+  description:
+    "Vendé tu propiedad con un servicio de excelencia. Recibí una atención personalizada contactándote con nuestro equipo. Oficinas en Palermo Hollywood, CABA.",
+  openGraph: {
+    title: "Contacto — Esquivel Propiedades",
+    description:
+      "Vendé tu propiedad con un servicio de excelencia. Recibí una atención personalizada contactándote con nuestro equipo.",
+  },
+  twitter: {
+    title: "Contacto — Esquivel Propiedades",
+    description:
+      "Vendé tu propiedad con un servicio de excelencia. Recibí una atención personalizada contactándote con nuestro equipo.",
+  },
+}
+
 export default function ContactoPage() {
   return (
     <>
