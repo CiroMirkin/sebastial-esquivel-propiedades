@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link";
 import { ImageCompare, PartnersBar, ProcessCTA, Reveal, Services, StaggeredGallery, WhatsAppCTA } from "@/components";
 import Image from "next/image";
-import { HeroSection } from "./hero-section";
+import { Hero } from "./Hero";
 
 export const metadata: Metadata = {
   title: "Inicio",
@@ -56,7 +56,7 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
+      <Hero />
 
       {/* Servicios */}
       <section className="pt-28 pb-20 bg-primary-50">
@@ -71,25 +71,7 @@ export default function HomePage() {
               </h2>
             </div>
           </Reveal>
-
-          <div className="w-full flex justify-start flex-wrap gap-6 md:gap-8 mb-16">
-            {[
-              { value: "-4 meses", label: "Tiempo promedio de venta" },
-              { value: "+40", label: "Inmobiliarias en red" },
-              { value: "360°", label: "Recorrido virtual incluido" },
-              { value: "3 portales", label: "Publicación destacada" },
-            ].map((stat, i) => (
-              <Reveal key={stat.label} delay={i * 0.1} className="p-6 flex flex-col gap-2">
-                <span className="font-serif text-3xl text-black">
-                  {stat.value}
-                </span>
-                <span className="text-xs text-black/70 leading-snug">
-                  {stat.label}
-                </span>
-              </Reveal>
-            ))}
-          </div>
-
+          
           <Services />
         </div>
       </section>
