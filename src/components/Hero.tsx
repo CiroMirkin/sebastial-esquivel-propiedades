@@ -29,7 +29,7 @@ export default function Hero() {
           <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/10 to-black/50" />
         </div>
 
-        <div className="relative mx-auto grid max-w-350 grid-cols-1 gap-10 px-6 pt-8 pb-20 md:px-12 md:pt-16 md:pb-28 lg:grid-cols-12 lg:gap-12">
+        <div className="relative mx-auto grid max-w-350 grid-cols-1 gap-10 px-6 pt-8 pb-14 md:px-12 md:pt-16 lg:grid-cols-12 lg:gap-12">
           <div className="relative z-10 lg:col-span-5">
             <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/50 px-4 py-1.5 text-xs tracking-[0.25em] uppercase backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-primary-600 text-black" />
@@ -109,6 +109,34 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="relative z-10 border-y border-white/10">
+          <div className="mx-auto grid max-w-350 grid-cols-2 divide-x divide-white/10 md:grid-cols-4">
+            {[
+              { value: "−4", suffix: "meses", label: "Tiempo promedio de venta" },
+              { value: "+40", suffix: "red", label: "Inmobiliarias asociadas" },
+              { value: "360°", suffix: "tour", label: "Recorrido virtual incluido" },
+              { value: "3", suffix: "portales", label: "Publicación destacada" },
+            ].map((s) => (
+              <div key={s.label} className="px-6 py-8 md:px-10 md:py-10">
+                <div className="flex items-baseline gap-2">
+                  <div
+                    className="text-4xl tracking-tight text-white md:text-5xl"
+                    style={{ fontFamily: "var(--font-display)", fontWeight: 400 }}
+                  >
+                    {s.value}
+                  </div>
+                  <div className="text-xs tracking-[0.2em] uppercase text-white">
+                    {s.suffix}
+                  </div>
+                </div>
+                <div className="mt-2 text-sm text-white">
+                  {s.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
