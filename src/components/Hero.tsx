@@ -58,8 +58,7 @@ export default function Hero() {
             <div className="lg:col-span-5">
               <div className="">
                 <Reveal>
-                  <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/50 px-4 py-1.5 text-xs tracking-[0.25em] uppercase backdrop-blur">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary-600 text-black" />
+                  <div className="mb-8 inline-flex items-center gap-3 rounded-full text-black border border-white/15 bg-white/50 px-4 pb-1.5 pt-2.5 text-xs tracking-[0.25em] uppercase backdrop-blur">
                     Zona Oeste · CABA
                   </div>
                 </Reveal>
@@ -100,14 +99,16 @@ export default function Hero() {
                 <Reveal delay={0.3}>
                   <div className="my-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                     <a
-                      href="#contacto"
-                      className="group inline-flex items-center gap-3 rounded-full bg-primary-200 px-7 py-4 text-sm font-medium text-black shadow-primary-200 transition-all hover:-translate-y-0.1 hover:shadow-[0_30px_60px_-15px_oklch(0.55_0.16_38/0.6)]"
+                      href="/contacto"
+                      className="group inline-flex items-center gap-3 rounded-full bg-primary-200 px-7 py-4 text-base font-medium text-black shadow-primary-200 transition-all hover:-translate-y-0.1 hover:shadow-[0_30px_60px_-15px_oklch(0.55_0.16_38/0.6)]"
                     >
                       Quiero vender
-                      <span className="grid h-7 w-7 place-items-center rounded-full bg-secondary-900 text-white transition-transform group-hover:translate-x-0.5" />
+                      <span className="grid h-8 w-8 place-items-center rounded-full bg-secondary-900 text-white transition-transform group-hover:translate-x-0.5">
+                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                      </span>
                     </a>
                     <a
-                      href="#servicios"
+                      href="/servicios"
                       className="inline-flex items-center gap-2 text-sm text-white underline decoration-white/30 underline-offset-8 transition-colors hover:decoration-primary-200"
                     >
                       Ver nuestros servicios
